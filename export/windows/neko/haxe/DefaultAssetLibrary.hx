@@ -62,6 +62,98 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		Font.registerFont (__ASSET__assets_fonts_vera_ttf);
+		Font.registerFont (__ASSET__assets_fonts_verab_ttf);
+		Font.registerFont (__ASSET__assets_fonts_verai_ttf);
+		Font.registerFont (__ASSET__assets_fonts_veraz_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -80,9 +172,131 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -117,6 +331,96 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("flixel/images/logo/default.png", __ASSET__flixel_images_logo_default_png);
 		type.set ("flixel/images/logo/default.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/box.png", __ASSET__flixel_flixel_ui_img_box_png);
+		type.set ("flixel/flixel-ui/img/box.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button.png", __ASSET__flixel_flixel_ui_img_button_png);
+		type.set ("flixel/flixel-ui/img/button.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_arrow_down.png", __ASSET__flixel_flixel_ui_img_button_arrow_down_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_down.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_arrow_left.png", __ASSET__flixel_flixel_ui_img_button_arrow_left_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_left.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_arrow_right.png", __ASSET__flixel_flixel_ui_img_button_arrow_right_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_right.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_arrow_up.png", __ASSET__flixel_flixel_ui_img_button_arrow_up_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_up.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_thin.png", __ASSET__flixel_flixel_ui_img_button_thin_png);
+		type.set ("flixel/flixel-ui/img/button_thin.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_toggle.png", __ASSET__flixel_flixel_ui_img_button_toggle_png);
+		type.set ("flixel/flixel-ui/img/button_toggle.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/check_box.png", __ASSET__flixel_flixel_ui_img_check_box_png);
+		type.set ("flixel/flixel-ui/img/check_box.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/check_mark.png", __ASSET__flixel_flixel_ui_img_check_mark_png);
+		type.set ("flixel/flixel-ui/img/check_mark.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/chrome.png", __ASSET__flixel_flixel_ui_img_chrome_png);
+		type.set ("flixel/flixel-ui/img/chrome.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/chrome_flat.png", __ASSET__flixel_flixel_ui_img_chrome_flat_png);
+		type.set ("flixel/flixel-ui/img/chrome_flat.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/chrome_inset.png", __ASSET__flixel_flixel_ui_img_chrome_inset_png);
+		type.set ("flixel/flixel-ui/img/chrome_inset.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/chrome_light.png", __ASSET__flixel_flixel_ui_img_chrome_light_png);
+		type.set ("flixel/flixel-ui/img/chrome_light.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/dropdown_mark.png", __ASSET__flixel_flixel_ui_img_dropdown_mark_png);
+		type.set ("flixel/flixel-ui/img/dropdown_mark.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/finger_big.png", __ASSET__flixel_flixel_ui_img_finger_big_png);
+		type.set ("flixel/flixel-ui/img/finger_big.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/finger_small.png", __ASSET__flixel_flixel_ui_img_finger_small_png);
+		type.set ("flixel/flixel-ui/img/finger_small.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/hilight.png", __ASSET__flixel_flixel_ui_img_hilight_png);
+		type.set ("flixel/flixel-ui/img/hilight.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/invis.png", __ASSET__flixel_flixel_ui_img_invis_png);
+		type.set ("flixel/flixel-ui/img/invis.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/minus_mark.png", __ASSET__flixel_flixel_ui_img_minus_mark_png);
+		type.set ("flixel/flixel-ui/img/minus_mark.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/plus_mark.png", __ASSET__flixel_flixel_ui_img_plus_mark_png);
+		type.set ("flixel/flixel-ui/img/plus_mark.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/radio.png", __ASSET__flixel_flixel_ui_img_radio_png);
+		type.set ("flixel/flixel-ui/img/radio.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/radio_dot.png", __ASSET__flixel_flixel_ui_img_radio_dot_png);
+		type.set ("flixel/flixel-ui/img/radio_dot.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/swatch.png", __ASSET__flixel_flixel_ui_img_swatch_png);
+		type.set ("flixel/flixel-ui/img/swatch.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/tab.png", __ASSET__flixel_flixel_ui_img_tab_png);
+		type.set ("flixel/flixel-ui/img/tab.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/tab_back.png", __ASSET__flixel_flixel_ui_img_tab_back_png);
+		type.set ("flixel/flixel-ui/img/tab_back.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/tooltip_arrow.png", __ASSET__flixel_flixel_ui_img_tooltip_arrow_png);
+		type.set ("flixel/flixel-ui/img/tooltip_arrow.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/xml/defaults.xml", __ASSET__flixel_flixel_ui_xml_defaults_xml);
+		type.set ("flixel/flixel-ui/xml/defaults.xml", AssetType.TEXT);
+		
+		className.set ("flixel/flixel-ui/xml/default_loading_screen.xml", __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml);
+		type.set ("flixel/flixel-ui/xml/default_loading_screen.xml", AssetType.TEXT);
+		
+		className.set ("flixel/flixel-ui/xml/default_popup.xml", __ASSET__flixel_flixel_ui_xml_default_popup_xml);
+		type.set ("flixel/flixel-ui/xml/default_popup.xml", AssetType.TEXT);
 		
 		
 		if (useManifest) {
@@ -528,14 +832,52 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:font("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/fonts/monsterrat.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends flash.text.Font {}
 @:bitmap("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/images/ui/button.png") @:keep #if display private #end class __ASSET__flixel_images_ui_button_png extends flash.display.BitmapData {}
 @:bitmap("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/images/logo/default.png") @:keep #if display private #end class __ASSET__flixel_images_logo_default_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/box.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_arrow_down.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_arrow_left.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_arrow_right.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_arrow_up.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_thin.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_toggle.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/check_box.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/check_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/chrome.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/chrome_flat.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/chrome_inset.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/chrome_light.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/dropdown_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/finger_big.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/finger_small.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/hilight.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/invis.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/minus_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/plus_mark.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/radio.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/radio_dot.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/swatch.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/tab.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/tab_back.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends flash.display.BitmapData {}
+@:bitmap("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/tooltip_arrow.png") @:keep #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends flash.display.BitmapData {}
+@:file("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/xml/defaults.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends flash.utils.ByteArray {}
+@:file("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/xml/default_loading_screen.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends flash.utils.ByteArray {}
+@:file("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/xml/default_popup.xml") @:keep #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends flash.utils.ByteArray {}
 
 
 
+@:keep class __ASSET__assets_fonts_vera_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/vera.ttf"; fontName = "Bitstream Vera Sans"; }}
+@:keep class __ASSET__assets_fonts_verab_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/verab.ttf"; fontName = "Bitstream Vera Sans Bold"; }}
+@:keep class __ASSET__assets_fonts_verai_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/verai.ttf"; fontName = "Bitstream Vera Sans Oblique"; }}
+@:keep class __ASSET__assets_fonts_veraz_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/veraz.ttf"; fontName = "Bitstream Vera Sans Bold Oblique"; }}
 
 
 #else
 
 
+class __ASSET__assets_fonts_vera_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/vera.ttf"; fontName = "Bitstream Vera Sans";  }}
+class __ASSET__assets_fonts_verab_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/verab.ttf"; fontName = "Bitstream Vera Sans Bold";  }}
+class __ASSET__assets_fonts_verai_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/verai.ttf"; fontName = "Bitstream Vera Sans Oblique";  }}
+class __ASSET__assets_fonts_veraz_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/veraz.ttf"; fontName = "Bitstream Vera Sans Bold Oblique";  }}
 class __ASSET__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "flixel/fonts/nokiafc22.ttf"; fontName = "Nokia Cellphone FC Small";  }}
 class __ASSET__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "flixel/fonts/monsterrat.ttf"; fontName = "Monsterrat";  }}
 
@@ -606,6 +948,98 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_vera_ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_verab_ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_verai_ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_veraz_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -623,18 +1057,174 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if flash
 		
 		path.set ("assets/data/data-goes-here.txt", "assets/data/data-goes-here.txt");
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
-		path.set ("assets/data/Lvl1.oel", "assets/data/Lvl1.oel");
-		type.set ("assets/data/Lvl1.oel", AssetType.TEXT);
-		path.set ("assets/data/Lvl1t.oel", "assets/data/Lvl1t.oel");
-		type.set ("assets/data/Lvl1t.oel", AssetType.TEXT);
-		path.set ("assets/data/Maps.oep", "assets/data/Maps.oep");
-		type.set ("assets/data/Maps.oep", AssetType.TEXT);
+		path.set ("assets/data/level.png", "assets/data/level.png");
+		type.set ("assets/data/level.png", AssetType.IMAGE);
+		path.set ("assets/data/level1.png", "assets/data/level1.png");
+		type.set ("assets/data/level1.png", AssetType.IMAGE);
+		path.set ("assets/data/level2.png", "assets/data/level2.png");
+		type.set ("assets/data/level2.png", AssetType.IMAGE);
+		path.set ("assets/data/level3.png", "assets/data/level3.png");
+		type.set ("assets/data/level3.png", AssetType.IMAGE);
+		path.set ("assets/data/tileset.png", "assets/data/tileset.png");
+		type.set ("assets/data/tileset.png", AssetType.IMAGE);
+		path.set ("assets/fonts/vera.ttf", "assets/fonts/vera.ttf");
+		type.set ("assets/fonts/vera.ttf", AssetType.FONT);
+		path.set ("assets/fonts/verab.ttf", "assets/fonts/verab.ttf");
+		type.set ("assets/fonts/verab.ttf", AssetType.FONT);
+		path.set ("assets/fonts/verai.ttf", "assets/fonts/verai.ttf");
+		type.set ("assets/fonts/verai.ttf", AssetType.FONT);
+		path.set ("assets/fonts/veraz.ttf", "assets/fonts/veraz.ttf");
+		type.set ("assets/fonts/veraz.ttf", AssetType.FONT);
+		path.set ("assets/gfx/other/icon_party.png", "assets/gfx/other/icon_party.png");
+		type.set ("assets/gfx/other/icon_party.png", AssetType.IMAGE);
+		path.set ("assets/gfx/other/portrait_mane.png", "assets/gfx/other/portrait_mane.png");
+		type.set ("assets/gfx/other/portrait_mane.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/blue.png", "assets/gfx/ui/buttons/blue.png");
+		type.set ("assets/gfx/ui/buttons/blue.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/blue_back.png", "assets/gfx/ui/buttons/blue_back.png");
+		type.set ("assets/gfx/ui/buttons/blue_back.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/blue_back_over.png", "assets/gfx/ui/buttons/blue_back_over.png");
+		type.set ("assets/gfx/ui/buttons/blue_back_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/blue_over.png", "assets/gfx/ui/buttons/blue_over.png");
+		type.set ("assets/gfx/ui/buttons/blue_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_blue.png", "assets/gfx/ui/buttons/button_blue.png");
+		type.set ("assets/gfx/ui/buttons/button_blue.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_blue_scale_0.png", "assets/gfx/ui/buttons/button_blue_scale_0.png");
+		type.set ("assets/gfx/ui/buttons/button_blue_scale_0.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_blue_scale_1.png", "assets/gfx/ui/buttons/button_blue_scale_1.png");
+		type.set ("assets/gfx/ui/buttons/button_blue_scale_1.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_blue_scale_2.png", "assets/gfx/ui/buttons/button_blue_scale_2.png");
+		type.set ("assets/gfx/ui/buttons/button_blue_scale_2.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_blue_scale_all.png", "assets/gfx/ui/buttons/button_blue_scale_all.png");
+		type.set ("assets/gfx/ui/buttons/button_blue_scale_all.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_blue_scale_all2.png", "assets/gfx/ui/buttons/button_blue_scale_all2.png");
+		type.set ("assets/gfx/ui/buttons/button_blue_scale_all2.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_blue_toggle.png", "assets/gfx/ui/buttons/button_blue_toggle.png");
+		type.set ("assets/gfx/ui/buttons/button_blue_toggle.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_confirmation_black.png", "assets/gfx/ui/buttons/button_confirmation_black.png");
+		type.set ("assets/gfx/ui/buttons/button_confirmation_black.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_confirmation_over.png", "assets/gfx/ui/buttons/button_confirmation_over.png");
+		type.set ("assets/gfx/ui/buttons/button_confirmation_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_confirmation_red_over.png", "assets/gfx/ui/buttons/button_confirmation_red_over.png");
+		type.set ("assets/gfx/ui/buttons/button_confirmation_red_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_confirmation_red_up.png", "assets/gfx/ui/buttons/button_confirmation_red_up.png");
+		type.set ("assets/gfx/ui/buttons/button_confirmation_red_up.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_confirmation_up.png", "assets/gfx/ui/buttons/button_confirmation_up.png");
+		type.set ("assets/gfx/ui/buttons/button_confirmation_up.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_gold.png", "assets/gfx/ui/buttons/button_gold.png");
+		type.set ("assets/gfx/ui/buttons/button_gold.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_gold_up.png", "assets/gfx/ui/buttons/button_gold_up.png");
+		type.set ("assets/gfx/ui/buttons/button_gold_up.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_grey.png", "assets/gfx/ui/buttons/button_grey.png");
+		type.set ("assets/gfx/ui/buttons/button_grey.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/button_red.png", "assets/gfx/ui/buttons/button_red.png");
+		type.set ("assets/gfx/ui/buttons/button_red.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/gold.png", "assets/gfx/ui/buttons/gold.png");
+		type.set ("assets/gfx/ui/buttons/gold.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/gold_over.png", "assets/gfx/ui/buttons/gold_over.png");
+		type.set ("assets/gfx/ui/buttons/gold_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/grey.png", "assets/gfx/ui/buttons/grey.png");
+		type.set ("assets/gfx/ui/buttons/grey.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/grey_over.png", "assets/gfx/ui/buttons/grey_over.png");
+		type.set ("assets/gfx/ui/buttons/grey_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/master_button_blue.png", "assets/gfx/ui/buttons/master_button_blue.png");
+		type.set ("assets/gfx/ui/buttons/master_button_blue.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/red.png", "assets/gfx/ui/buttons/red.png");
+		type.set ("assets/gfx/ui/buttons/red.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/red_over.png", "assets/gfx/ui/buttons/red_over.png");
+		type.set ("assets/gfx/ui/buttons/red_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/tab_grey.png", "assets/gfx/ui/buttons/tab_grey.png");
+		type.set ("assets/gfx/ui/buttons/tab_grey.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/tab_grey_back.png", "assets/gfx/ui/buttons/tab_grey_back.png");
+		type.set ("assets/gfx/ui/buttons/tab_grey_back.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/tab_grey_back_over.png", "assets/gfx/ui/buttons/tab_grey_back_over.png");
+		type.set ("assets/gfx/ui/buttons/tab_grey_back_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/buttons/tab_grey_over.png", "assets/gfx/ui/buttons/tab_grey_over.png");
+		type.set ("assets/gfx/ui/buttons/tab_grey_over.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/chrome/dark_grey.png", "assets/gfx/ui/chrome/dark_grey.png");
+		type.set ("assets/gfx/ui/chrome/dark_grey.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/chrome/dark_grey_flat_top.png", "assets/gfx/ui/chrome/dark_grey_flat_top.png");
+		type.set ("assets/gfx/ui/chrome/dark_grey_flat_top.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/chrome/dark_grey_inset.png", "assets/gfx/ui/chrome/dark_grey_inset.png");
+		type.set ("assets/gfx/ui/chrome/dark_grey_inset.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/chrome/dark_grey_texture.png", "assets/gfx/ui/chrome/dark_grey_texture.png");
+		type.set ("assets/gfx/ui/chrome/dark_grey_texture.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/check_big.png", "assets/gfx/ui/misc/check_big.png");
+		type.set ("assets/gfx/ui/misc/check_big.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/check_box_big.png", "assets/gfx/ui/misc/check_box_big.png");
+		type.set ("assets/gfx/ui/misc/check_box_big.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/check_box_small.png", "assets/gfx/ui/misc/check_box_small.png");
+		type.set ("assets/gfx/ui/misc/check_box_small.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/check_small.png", "assets/gfx/ui/misc/check_small.png");
+		type.set ("assets/gfx/ui/misc/check_small.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/flag_blank.png", "assets/gfx/ui/misc/flag_blank.png");
+		type.set ("assets/gfx/ui/misc/flag_blank.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/health_bar.png", "assets/gfx/ui/misc/health_bar.png");
+		type.set ("assets/gfx/ui/misc/health_bar.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/mana_bar.png", "assets/gfx/ui/misc/mana_bar.png");
+		type.set ("assets/gfx/ui/misc/mana_bar.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/radio.png", "assets/gfx/ui/misc/radio.png");
+		type.set ("assets/gfx/ui/misc/radio.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/misc/radio_dot.png", "assets/gfx/ui/misc/radio_dot.png");
+		type.set ("assets/gfx/ui/misc/radio_dot.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/saveslot.png", "assets/gfx/ui/saveslot.png");
+		type.set ("assets/gfx/ui/saveslot.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/saveslot_shadow.png", "assets/gfx/ui/saveslot_shadow.png");
+		type.set ("assets/gfx/ui/saveslot_shadow.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/save_menu_overlay.png", "assets/gfx/ui/save_menu_overlay.png");
+		type.set ("assets/gfx/ui/save_menu_overlay.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/title_back.png", "assets/gfx/ui/title_back.png");
+		type.set ("assets/gfx/ui/title_back.png", AssetType.IMAGE);
+		path.set ("assets/gfx/ui/title_back2.png", "assets/gfx/ui/title_back2.png");
+		type.set ("assets/gfx/ui/title_back2.png", AssetType.IMAGE);
+		path.set ("assets/images/ASE/DeathBall.ase", "assets/images/ASE/DeathBall.ase");
+		type.set ("assets/images/ASE/DeathBall.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/Tower.ase", "assets/images/ASE/Tower.ase");
+		type.set ("assets/images/ASE/Tower.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/tower_earth.ase", "assets/images/ASE/tower_earth.ase");
+		type.set ("assets/images/ASE/tower_earth.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/tower_earth.png", "assets/images/ASE/tower_earth.png");
+		type.set ("assets/images/ASE/tower_earth.png", AssetType.IMAGE);
+		path.set ("assets/images/ASE/tower_water.ase", "assets/images/ASE/tower_water.ase");
+		type.set ("assets/images/ASE/tower_water.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/tower_water.png", "assets/images/ASE/tower_water.png");
+		type.set ("assets/images/ASE/tower_water.png", AssetType.IMAGE);
 		path.set ("assets/images/coin.png", "assets/images/coin.png");
 		type.set ("assets/images/coin.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-0.png", "assets/images/enemy-0.png");
@@ -645,20 +1235,78 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/Flixoul.png", AssetType.IMAGE);
 		path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
-		path.set ("assets/images/tiles.png", "assets/images/tiles.png");
-		type.set ("assets/images/tiles.png", AssetType.IMAGE);
+		path.set ("assets/images/map.png", "assets/images/map.png");
+		type.set ("assets/images/map.png", AssetType.IMAGE);
 		path.set ("assets/images/tiles1.png", "assets/images/tiles1.png");
 		type.set ("assets/images/tiles1.png", AssetType.IMAGE);
 		path.set ("assets/images/tizles.png", "assets/images/tizles.png");
 		type.set ("assets/images/tizles.png", AssetType.IMAGE);
+		path.set ("assets/images/tower.png", "assets/images/tower.png");
+		type.set ("assets/images/tower.png", AssetType.IMAGE);
+		path.set ("assets/images/tower_earth.png", "assets/images/tower_earth.png");
+		type.set ("assets/images/tower_earth.png", AssetType.IMAGE);
+		path.set ("assets/images/tower_fire.png", "assets/images/tower_fire.png");
+		type.set ("assets/images/tower_fire.png", AssetType.IMAGE);
+		path.set ("assets/images/tower_water.png", "assets/images/tower_water.png");
+		type.set ("assets/images/tower_water.png", AssetType.IMAGE);
 		path.set ("assets/images/Zombie.png", "assets/images/Zombie.png");
 		type.set ("assets/images/Zombie.png", AssetType.IMAGE);
 		path.set ("assets/levels.png", "assets/levels.png");
 		type.set ("assets/levels.png", AssetType.IMAGE);
+		path.set ("assets/locales/en-US/fontss.xml", "assets/locales/en-US/fontss.xml");
+		type.set ("assets/locales/en-US/fontss.xml", AssetType.TEXT);
+		path.set ("assets/locales/en-US/uius.csv", "assets/locales/en-US/uius.csv");
+		type.set ("assets/locales/en-US/uius.csv", AssetType.TEXT);
+		path.set ("assets/locales/index.xml", "assets/locales/index.xml");
+		type.set ("assets/locales/index.xml", AssetType.TEXT);
+		path.set ("assets/locales/nb-NO/fonts.xml", "assets/locales/nb-NO/fonts.xml");
+		type.set ("assets/locales/nb-NO/fonts.xml", AssetType.TEXT);
+		path.set ("assets/locales/nb-NO/ui.csv", "assets/locales/nb-NO/ui.csv");
+		type.set ("assets/locales/nb-NO/ui.csv", AssetType.TEXT);
+		path.set ("assets/locales/_flags/cs-CZ.png", "assets/locales/_flags/cs-CZ.png");
+		type.set ("assets/locales/_flags/cs-CZ.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/de-DE.png", "assets/locales/_flags/de-DE.png");
+		type.set ("assets/locales/_flags/de-DE.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/en-CA.png", "assets/locales/_flags/en-CA.png");
+		type.set ("assets/locales/_flags/en-CA.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/en-GB.png", "assets/locales/_flags/en-GB.png");
+		type.set ("assets/locales/_flags/en-GB.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/en-US.png", "assets/locales/_flags/en-US.png");
+		type.set ("assets/locales/_flags/en-US.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/es-ES.png", "assets/locales/_flags/es-ES.png");
+		type.set ("assets/locales/_flags/es-ES.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/fr-FR.png", "assets/locales/_flags/fr-FR.png");
+		type.set ("assets/locales/_flags/fr-FR.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/it-IT.png", "assets/locales/_flags/it-IT.png");
+		type.set ("assets/locales/_flags/it-IT.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/ja-JP.png", "assets/locales/_flags/ja-JP.png");
+		type.set ("assets/locales/_flags/ja-JP.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/ko-KR.png", "assets/locales/_flags/ko-KR.png");
+		type.set ("assets/locales/_flags/ko-KR.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/nb-NO.png", "assets/locales/_flags/nb-NO.png");
+		type.set ("assets/locales/_flags/nb-NO.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/pl-PL.png", "assets/locales/_flags/pl-PL.png");
+		type.set ("assets/locales/_flags/pl-PL.png", AssetType.IMAGE);
+		path.set ("assets/locales/_flags/yo-DA.png", "assets/locales/_flags/yo-DA.png");
+		type.set ("assets/locales/_flags/yo-DA.png", AssetType.IMAGE);
 		path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		path.set ("assets/sounds/sounds-go-here.txt", "assets/sounds/sounds-go-here.txt");
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
+		path.set ("assets/tiled/example.tmx", "assets/tiled/example.tmx");
+		type.set ("assets/tiled/example.tmx", AssetType.TEXT);
+		path.set ("assets/tiled/mainLevel.tmx", "assets/tiled/mainLevel.tmx");
+		type.set ("assets/tiled/mainLevel.tmx", AssetType.TEXT);
+		path.set ("assets/tiled/maps.tmx", "assets/tiled/maps.tmx");
+		type.set ("assets/tiled/maps.tmx", AssetType.TEXT);
+		path.set ("assets/tiled/tileset.png", "assets/tiled/tileset.png");
+		type.set ("assets/tiled/tileset.png", AssetType.IMAGE);
+		path.set ("assets/tiled/tileset.tsx", "assets/tiled/tileset.tsx");
+		type.set ("assets/tiled/tileset.tsx", AssetType.TEXT);
+		path.set ("assets/xml/Menu.xml", "assets/xml/Menu.xml");
+		type.set ("assets/xml/Menu.xml", AssetType.TEXT);
+		path.set ("assets/xml/_ui_globals.xml", "assets/xml/_ui_globals.xml");
+		type.set ("assets/xml/_ui_globals.xml", AssetType.TEXT);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -671,6 +1319,66 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("flixel/images/ui/button.png", AssetType.IMAGE);
 		className.set ("flixel/images/logo/default.png", __ASSET__flixel_images_logo_default_png);
 		type.set ("flixel/images/logo/default.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/box.png", __ASSET__flixel_flixel_ui_img_box_png);
+		type.set ("flixel/flixel-ui/img/box.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/button.png", __ASSET__flixel_flixel_ui_img_button_png);
+		type.set ("flixel/flixel-ui/img/button.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/button_arrow_down.png", __ASSET__flixel_flixel_ui_img_button_arrow_down_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_down.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/button_arrow_left.png", __ASSET__flixel_flixel_ui_img_button_arrow_left_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_left.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/button_arrow_right.png", __ASSET__flixel_flixel_ui_img_button_arrow_right_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_right.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/button_arrow_up.png", __ASSET__flixel_flixel_ui_img_button_arrow_up_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_up.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/button_thin.png", __ASSET__flixel_flixel_ui_img_button_thin_png);
+		type.set ("flixel/flixel-ui/img/button_thin.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/button_toggle.png", __ASSET__flixel_flixel_ui_img_button_toggle_png);
+		type.set ("flixel/flixel-ui/img/button_toggle.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/check_box.png", __ASSET__flixel_flixel_ui_img_check_box_png);
+		type.set ("flixel/flixel-ui/img/check_box.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/check_mark.png", __ASSET__flixel_flixel_ui_img_check_mark_png);
+		type.set ("flixel/flixel-ui/img/check_mark.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/chrome.png", __ASSET__flixel_flixel_ui_img_chrome_png);
+		type.set ("flixel/flixel-ui/img/chrome.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/chrome_flat.png", __ASSET__flixel_flixel_ui_img_chrome_flat_png);
+		type.set ("flixel/flixel-ui/img/chrome_flat.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/chrome_inset.png", __ASSET__flixel_flixel_ui_img_chrome_inset_png);
+		type.set ("flixel/flixel-ui/img/chrome_inset.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/chrome_light.png", __ASSET__flixel_flixel_ui_img_chrome_light_png);
+		type.set ("flixel/flixel-ui/img/chrome_light.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/dropdown_mark.png", __ASSET__flixel_flixel_ui_img_dropdown_mark_png);
+		type.set ("flixel/flixel-ui/img/dropdown_mark.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/finger_big.png", __ASSET__flixel_flixel_ui_img_finger_big_png);
+		type.set ("flixel/flixel-ui/img/finger_big.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/finger_small.png", __ASSET__flixel_flixel_ui_img_finger_small_png);
+		type.set ("flixel/flixel-ui/img/finger_small.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/hilight.png", __ASSET__flixel_flixel_ui_img_hilight_png);
+		type.set ("flixel/flixel-ui/img/hilight.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/invis.png", __ASSET__flixel_flixel_ui_img_invis_png);
+		type.set ("flixel/flixel-ui/img/invis.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/minus_mark.png", __ASSET__flixel_flixel_ui_img_minus_mark_png);
+		type.set ("flixel/flixel-ui/img/minus_mark.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/plus_mark.png", __ASSET__flixel_flixel_ui_img_plus_mark_png);
+		type.set ("flixel/flixel-ui/img/plus_mark.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/radio.png", __ASSET__flixel_flixel_ui_img_radio_png);
+		type.set ("flixel/flixel-ui/img/radio.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/radio_dot.png", __ASSET__flixel_flixel_ui_img_radio_dot_png);
+		type.set ("flixel/flixel-ui/img/radio_dot.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/swatch.png", __ASSET__flixel_flixel_ui_img_swatch_png);
+		type.set ("flixel/flixel-ui/img/swatch.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/tab.png", __ASSET__flixel_flixel_ui_img_tab_png);
+		type.set ("flixel/flixel-ui/img/tab.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/tab_back.png", __ASSET__flixel_flixel_ui_img_tab_back_png);
+		type.set ("flixel/flixel-ui/img/tab_back.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/img/tooltip_arrow.png", __ASSET__flixel_flixel_ui_img_tooltip_arrow_png);
+		type.set ("flixel/flixel-ui/img/tooltip_arrow.png", AssetType.IMAGE);
+		className.set ("flixel/flixel-ui/xml/defaults.xml", __ASSET__flixel_flixel_ui_xml_defaults_xml);
+		type.set ("flixel/flixel-ui/xml/defaults.xml", AssetType.TEXT);
+		className.set ("flixel/flixel-ui/xml/default_loading_screen.xml", __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml);
+		type.set ("flixel/flixel-ui/xml/default_loading_screen.xml", AssetType.TEXT);
+		className.set ("flixel/flixel-ui/xml/default_popup.xml", __ASSET__flixel_flixel_ui_xml_default_popup_xml);
+		type.set ("flixel/flixel-ui/xml/default_popup.xml", AssetType.TEXT);
 		
 		
 		#elseif html5
@@ -679,15 +1387,204 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/data/data-goes-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/data/Lvl1.oel";
+		id = "assets/data/level.png";
 		path.set (id, id);
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/Lvl1t.oel";
+		type.set (id, AssetType.IMAGE);
+		id = "assets/data/level1.png";
 		path.set (id, id);
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/Maps.oep";
+		type.set (id, AssetType.IMAGE);
+		id = "assets/data/level2.png";
 		path.set (id, id);
-		type.set (id, AssetType.TEXT);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/data/level3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/data/tileset.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/fonts/vera.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/fonts/verab.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/fonts/verai.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/fonts/veraz.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/gfx/other/icon_party.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/other/portrait_mane.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/blue.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/blue_back.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/blue_back_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/blue_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_blue.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_blue_scale_0.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_blue_scale_1.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_blue_scale_2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_blue_scale_all.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_blue_scale_all2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_blue_toggle.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_confirmation_black.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_confirmation_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_confirmation_red_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_confirmation_red_up.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_confirmation_up.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_gold.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_gold_up.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_grey.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/button_red.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/gold.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/gold_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/grey.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/grey_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/master_button_blue.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/red.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/red_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/tab_grey.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/tab_grey_back.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/tab_grey_back_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/buttons/tab_grey_over.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/chrome/dark_grey.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/chrome/dark_grey_flat_top.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/chrome/dark_grey_inset.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/chrome/dark_grey_texture.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/check_big.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/check_box_big.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/check_box_small.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/check_small.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/flag_blank.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/health_bar.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/mana_bar.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/radio.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/misc/radio_dot.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/saveslot.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/saveslot_shadow.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/save_menu_overlay.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/title_back.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/gfx/ui/title_back2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/ASE/DeathBall.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/Tower.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/tower_earth.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/tower_earth.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/ASE/tower_water.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/tower_water.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/coin.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -703,7 +1600,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/images-go-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/images/tiles.png";
+		id = "assets/images/map.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tiles1.png";
@@ -712,16 +1609,103 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/tizles.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tower.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tower_earth.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tower_fire.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tower_water.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Zombie.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/levels.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/en-US/fontss.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/locales/en-US/uius.csv";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/locales/index.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/locales/nb-NO/fonts.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/locales/nb-NO/ui.csv";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/locales/_flags/cs-CZ.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/de-DE.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/en-CA.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/en-GB.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/en-US.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/es-ES.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/fr-FR.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/it-IT.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/ja-JP.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/ko-KR.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/nb-NO.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/pl-PL.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/locales/_flags/yo-DA.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/sounds/sounds-go-here.txt";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/tiled/example.tmx";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/tiled/mainLevel.tmx";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/tiled/maps.tmx";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/tiled/tileset.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/tiled/tileset.tsx";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/xml/Menu.xml";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/xml/_ui_globals.xml";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "flixel/sounds/beep.ogg";
@@ -748,6 +1732,126 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/box.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/button.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/button_arrow_down.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/button_arrow_left.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/button_arrow_right.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/button_arrow_up.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/button_thin.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/button_toggle.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/check_box.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/check_mark.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/chrome.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/chrome_flat.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/chrome_inset.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/chrome_light.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/dropdown_mark.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/finger_big.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/finger_small.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/hilight.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/invis.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/minus_mark.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/plus_mark.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/radio.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/radio_dot.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/swatch.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/tab.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/tab_back.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/img/tooltip_arrow.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "flixel/flixel-ui/xml/defaults.xml";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "flixel/flixel-ui/xml/default_loading_screen.xml";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "flixel/flixel-ui/xml/default_popup.xml";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		
 		
 		var assetsPrefix = null;
@@ -765,6 +1869,106 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		
+		className.set ("assets/fonts/vera.ttf", __ASSET__assets_fonts_vera_ttf);
+		type.set ("assets/fonts/vera.ttf", AssetType.FONT);
+		
+		className.set ("assets/fonts/verab.ttf", __ASSET__assets_fonts_verab_ttf);
+		type.set ("assets/fonts/verab.ttf", AssetType.FONT);
+		
+		className.set ("assets/fonts/verai.ttf", __ASSET__assets_fonts_verai_ttf);
+		type.set ("assets/fonts/verai.ttf", AssetType.FONT);
+		
+		className.set ("assets/fonts/veraz.ttf", __ASSET__assets_fonts_veraz_ttf);
+		type.set ("assets/fonts/veraz.ttf", AssetType.FONT);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -799,6 +2003,96 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("flixel/images/logo/default.png", __ASSET__flixel_images_logo_default_png);
 		type.set ("flixel/images/logo/default.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/box.png", __ASSET__flixel_flixel_ui_img_box_png);
+		type.set ("flixel/flixel-ui/img/box.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button.png", __ASSET__flixel_flixel_ui_img_button_png);
+		type.set ("flixel/flixel-ui/img/button.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_arrow_down.png", __ASSET__flixel_flixel_ui_img_button_arrow_down_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_down.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_arrow_left.png", __ASSET__flixel_flixel_ui_img_button_arrow_left_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_left.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_arrow_right.png", __ASSET__flixel_flixel_ui_img_button_arrow_right_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_right.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_arrow_up.png", __ASSET__flixel_flixel_ui_img_button_arrow_up_png);
+		type.set ("flixel/flixel-ui/img/button_arrow_up.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_thin.png", __ASSET__flixel_flixel_ui_img_button_thin_png);
+		type.set ("flixel/flixel-ui/img/button_thin.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/button_toggle.png", __ASSET__flixel_flixel_ui_img_button_toggle_png);
+		type.set ("flixel/flixel-ui/img/button_toggle.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/check_box.png", __ASSET__flixel_flixel_ui_img_check_box_png);
+		type.set ("flixel/flixel-ui/img/check_box.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/check_mark.png", __ASSET__flixel_flixel_ui_img_check_mark_png);
+		type.set ("flixel/flixel-ui/img/check_mark.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/chrome.png", __ASSET__flixel_flixel_ui_img_chrome_png);
+		type.set ("flixel/flixel-ui/img/chrome.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/chrome_flat.png", __ASSET__flixel_flixel_ui_img_chrome_flat_png);
+		type.set ("flixel/flixel-ui/img/chrome_flat.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/chrome_inset.png", __ASSET__flixel_flixel_ui_img_chrome_inset_png);
+		type.set ("flixel/flixel-ui/img/chrome_inset.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/chrome_light.png", __ASSET__flixel_flixel_ui_img_chrome_light_png);
+		type.set ("flixel/flixel-ui/img/chrome_light.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/dropdown_mark.png", __ASSET__flixel_flixel_ui_img_dropdown_mark_png);
+		type.set ("flixel/flixel-ui/img/dropdown_mark.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/finger_big.png", __ASSET__flixel_flixel_ui_img_finger_big_png);
+		type.set ("flixel/flixel-ui/img/finger_big.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/finger_small.png", __ASSET__flixel_flixel_ui_img_finger_small_png);
+		type.set ("flixel/flixel-ui/img/finger_small.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/hilight.png", __ASSET__flixel_flixel_ui_img_hilight_png);
+		type.set ("flixel/flixel-ui/img/hilight.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/invis.png", __ASSET__flixel_flixel_ui_img_invis_png);
+		type.set ("flixel/flixel-ui/img/invis.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/minus_mark.png", __ASSET__flixel_flixel_ui_img_minus_mark_png);
+		type.set ("flixel/flixel-ui/img/minus_mark.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/plus_mark.png", __ASSET__flixel_flixel_ui_img_plus_mark_png);
+		type.set ("flixel/flixel-ui/img/plus_mark.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/radio.png", __ASSET__flixel_flixel_ui_img_radio_png);
+		type.set ("flixel/flixel-ui/img/radio.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/radio_dot.png", __ASSET__flixel_flixel_ui_img_radio_dot_png);
+		type.set ("flixel/flixel-ui/img/radio_dot.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/swatch.png", __ASSET__flixel_flixel_ui_img_swatch_png);
+		type.set ("flixel/flixel-ui/img/swatch.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/tab.png", __ASSET__flixel_flixel_ui_img_tab_png);
+		type.set ("flixel/flixel-ui/img/tab.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/tab_back.png", __ASSET__flixel_flixel_ui_img_tab_back_png);
+		type.set ("flixel/flixel-ui/img/tab_back.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/img/tooltip_arrow.png", __ASSET__flixel_flixel_ui_img_tooltip_arrow_png);
+		type.set ("flixel/flixel-ui/img/tooltip_arrow.png", AssetType.IMAGE);
+		
+		className.set ("flixel/flixel-ui/xml/defaults.xml", __ASSET__flixel_flixel_ui_xml_defaults_xml);
+		type.set ("flixel/flixel-ui/xml/defaults.xml", AssetType.TEXT);
+		
+		className.set ("flixel/flixel-ui/xml/default_loading_screen.xml", __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml);
+		type.set ("flixel/flixel-ui/xml/default_loading_screen.xml", AssetType.TEXT);
+		
+		className.set ("flixel/flixel-ui/xml/default_popup.xml", __ASSET__flixel_flixel_ui_xml_default_popup_xml);
+		type.set ("flixel/flixel-ui/xml/default_popup.xml", AssetType.TEXT);
 		
 		
 		if (useManifest) {
@@ -1533,15 +2827,229 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_images_ui_button_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__flixel_images_logo_default_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends null { }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends null { }
+@:keep @:bind #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends null { }
 
 
 #elseif html5
+
+
+
+
+
+
+
+@:keep #if display private #end class __ASSET__assets_fonts_vera_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans"; } } 
+@:keep #if display private #end class __ASSET__assets_fonts_verab_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Bold"; } } 
+@:keep #if display private #end class __ASSET__assets_fonts_verai_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Oblique"; } } 
+@:keep #if display private #end class __ASSET__assets_fonts_veraz_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Bold Oblique"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1567,8 +3075,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #else
 
+@:keep #if display private #end class __ASSET__assets_fonts_vera_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/vera.ttf"; name = "Bitstream Vera Sans"; super (); }}
+@:keep #if display private #end class __ASSET__assets_fonts_verab_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/verab.ttf"; name = "Bitstream Vera Sans Bold"; super (); }}
+@:keep #if display private #end class __ASSET__assets_fonts_verai_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/verai.ttf"; name = "Bitstream Vera Sans Oblique"; super (); }}
+@:keep #if display private #end class __ASSET__assets_fonts_veraz_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/veraz.ttf"; name = "Bitstream Vera Sans Bold Oblique"; super (); }}
 
 
 #if (windows || mac || linux || cpp)
@@ -1580,6 +3122,36 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:font("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/fonts/monsterrat.ttf") #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
 @:image("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/images/ui/button.png") #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
 @:image("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/images/logo/default.png") #if display private #end class __ASSET__flixel_images_logo_default_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/box.png") #if display private #end class __ASSET__flixel_flixel_ui_img_box_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_arrow_down.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_down_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_arrow_left.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_left_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_arrow_right.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_right_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_arrow_up.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_arrow_up_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_thin.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_thin_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/button_toggle.png") #if display private #end class __ASSET__flixel_flixel_ui_img_button_toggle_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/check_box.png") #if display private #end class __ASSET__flixel_flixel_ui_img_check_box_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/check_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_check_mark_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/chrome.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/chrome_flat.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_flat_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/chrome_inset.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_inset_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/chrome_light.png") #if display private #end class __ASSET__flixel_flixel_ui_img_chrome_light_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/dropdown_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_dropdown_mark_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/finger_big.png") #if display private #end class __ASSET__flixel_flixel_ui_img_finger_big_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/finger_small.png") #if display private #end class __ASSET__flixel_flixel_ui_img_finger_small_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/hilight.png") #if display private #end class __ASSET__flixel_flixel_ui_img_hilight_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/invis.png") #if display private #end class __ASSET__flixel_flixel_ui_img_invis_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/minus_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_minus_mark_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/plus_mark.png") #if display private #end class __ASSET__flixel_flixel_ui_img_plus_mark_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/radio.png") #if display private #end class __ASSET__flixel_flixel_ui_img_radio_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/radio_dot.png") #if display private #end class __ASSET__flixel_flixel_ui_img_radio_dot_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/swatch.png") #if display private #end class __ASSET__flixel_flixel_ui_img_swatch_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/tab.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tab_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/tab_back.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tab_back_png extends lime.graphics.Image {}
+@:image("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/images/tooltip_arrow.png") #if display private #end class __ASSET__flixel_flixel_ui_img_tooltip_arrow_png extends lime.graphics.Image {}
+@:file("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/xml/defaults.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_defaults_xml extends lime.utils.ByteArray {}
+@:file("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/xml/default_loading_screen.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_default_loading_screen_xml extends lime.utils.ByteArray {}
+@:file("C:/HaxeToolkit/haxe/lib/flixel-ui/2,2,0/assets/xml/default_popup.xml") #if display private #end class __ASSET__flixel_flixel_ui_xml_default_popup_xml extends lime.utils.ByteArray {}
 
 
 
@@ -1587,6 +3159,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 #end
 
 #if (openfl && !flash)
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_vera_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/vera.ttf"; name = "Bitstream Vera Sans"; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_verab_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/verab.ttf"; name = "Bitstream Vera Sans Bold"; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_verai_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/verai.ttf"; name = "Bitstream Vera Sans Oblique"; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_veraz_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/veraz.ttf"; name = "Bitstream Vera Sans Bold Oblique"; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__flixel_fonts_nokiafc22_ttf (); src = font.src; name = font.name; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__flixel_fonts_monsterrat_ttf (); src = font.src; name = font.name; super (); }}
 
