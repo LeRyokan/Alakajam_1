@@ -127,11 +127,11 @@ class Enemy extends FlxSprite
      {
 
         super.draw();
-		
-		if (this.path != null && !this.path.finished)
-		{
-			this.drawDebug();
-		}
+		//
+		//if (this.path != null && !this.path.finished)
+		//{
+			//this.drawDebug();
+		//}
      }
 	 
 	 public function getHit(value:Int):Bool

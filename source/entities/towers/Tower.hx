@@ -6,11 +6,15 @@ import enums.Element;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
+import flixel.addons.display.shapes.FlxShapeCircle;
 import flixel.addons.util.FlxFSM;
 import flixel.addons.util.FlxFSM.FlxFSMState;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.input.mouse.FlxMouseEventManager;
+import flixel.math.FlxVelocity;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.system.FlxSound;
+import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
 /**
@@ -36,11 +40,14 @@ class Tower extends FlxSprite
 	public var _isInRange 	:Bool = false;
 	public var _target 		:Enemy;
 	
-	
+	public var _radiusGUI : FlxShapeCircle;
 	
 	
 	public var enemies :FlxTypedGroup<Enemy>;
 	
+	
+	//VISUAL ATTACK
+	public var _hitSprite :FlxSprite;
 	
 	//SOUND
 	public var _putTowerSound:FlxSound;
@@ -48,6 +55,12 @@ class Tower extends FlxSprite
 	public function new(?X:Float=0, ?Y:Float=0,elementType:Element) 
 	{
 		super(X, Y);
+		
+		//INIT ATTACK VISUAL
+		_hitSprite = new FlxSprite(0, 0);
+		_hitSprite.loadGraphic("assets/images/bullet.png", false, 8, 8, false);
+		_hitSprite.visible = false;
+		_hitSprite.allowCollisions = FlxObject.NONE;
 		
 		//_elementType = ElementType;
 		enemies = new FlxTypedGroup<Enemy>();
@@ -97,6 +110,15 @@ class Tower extends FlxSprite
 		_flxBrain = new FlxFSM<FlxSprite>(this);
 		_putTowerSound.play(false, 0);
 		
+		//EVENT
+		FlxMouseEventManager.add(this, null, null, onOver, onOut);
+		
+		//UI ZONE D'ATTAQUE
+		_radiusGUI = new FlxShapeCircle(X, Y, 25, { thickness:1, color:FlxColor.RED }, FlxColor.PINK);
+		_radiusGUI.alpha = 0.1;
+		_radiusGUI.visible = false;
+			
+		
 	}
 	
 	 override public function update(elapsed:Float):Void
@@ -116,7 +138,17 @@ class Tower extends FlxSprite
 	}
 	
 	
+	private function onOver(_)
+	{
+		color = 0x00FF00;
+		_radiusGUI.visible = true;
+	}
 	
+	private function onOut(_)
+	{
+		color = FlxColor.WHITE;
+		_radiusGUI.visible = false;
+	}
 	
 	override public function draw():Void
     {
@@ -137,7 +169,7 @@ class Tower extends FlxSprite
 		
 	}
 	
-	public function canAttack():Bool
+	public function canAttack(enemyTarget:Enemy):Bool
 	{
 		
 		var canAttack:Bool = false;
@@ -146,6 +178,9 @@ class Tower extends FlxSprite
 			var timer:FlxTimer = new FlxTimer();
 			_isAttacking = true;
 			canAttack = true;
+			_hitSprite.setPosition(this.x + 8, this.y + 8);
+			_hitSprite.visible = true;
+			FlxVelocity.moveTowardsObject(_hitSprite, enemyTarget, 60, 1);
 			timer.start(1, onTimer, 1);
 		}
 		

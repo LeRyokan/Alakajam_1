@@ -50,9 +50,19 @@ class WinState extends FlxState
 		_startDisplay.screenCenter();
 		add(_startDisplay);
 		
-		_credit = new FlxText(0, 0, 0, "Click to reach the next level", 8, true);
-		_credit.screenCenter();
-		_credit.y += 100;
+		if (_nextLvlToLoad != 4)
+		{
+			_credit = new FlxText(0, 0, 0, "Click to reach the next level", 8, true);
+			_credit.screenCenter();
+			_credit.y += 100;
+		}
+		else
+		{
+			_credit = new FlxText(0, 0, 0, "WP you survive to this game ! ", 8, true);
+			_credit.screenCenter();
+			_credit.y += 100;
+		}
+		
 		add(_credit);
 		
 		//_moreCredit = new FlxText(0, 0, 0, "Twitter : @LucasTixier", 8, true);
@@ -72,7 +82,14 @@ class WinState extends FlxState
         // The left mouse button has just been pressed
 		
 			//Lance le niveau suivant;
-			FlxG.switchState(new PlayState(_nextLvlToLoad,_money,_life));	
+			if (_nextLvlToLoad != 4)
+			{
+				FlxG.switchState(new PlayState(_nextLvlToLoad, _money, _life));
+			}
+			else
+			{
+				FlxG.switchState(new MenuState());
+			}
 		}
 		
 		

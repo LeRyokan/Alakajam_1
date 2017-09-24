@@ -6,8 +6,10 @@ import entities.Player;
 import entities.enemies.Enemy;
 import entities.towers.Tower;
 import enums.Element;
+import flixel.addons.display.shapes.FlxShapeCircle;
 import flixel.addons.editors.tiled.TiledMap;
 import flixel.addons.editors.tiled.TiledTileLayer;
+import flixel.input.mouse.FlxMouseEventManager;
 import flixel.system.FlxSound;
 import flixel.tile.FlxBaseTilemap.FlxTilemapAutoTiling;
 import flixel.util.FlxArrayUtil;
@@ -82,6 +84,7 @@ class PlayState extends FlxState
 	
 	//SOUND
 	public var _gameMusic:FlxSound;
+	public var _alreadyATowerHere : FlxSound;
 	
 	
 	//SYSTEM ATTACK
@@ -100,9 +103,12 @@ class PlayState extends FlxState
 	
 	override public function create():Void 
 	{
+		//FlxG.plugins.add(new FlxMouseEventManager());
+		
 		
 		//SOUND
-		_gameMusic = FlxG.sound.load("assets/music/tracki.wav", 1, true);
+		_gameMusic = FlxG.sound.load("assets/music/mainMusics.wav", 1, true);
+		_alreadyATowerHere = FlxG.sound.load("assets/sounds/nope.wav", 1, false);
 		
 		//INSTANCIATION
 		_enemies = new FlxTypedGroup<Enemy>();
@@ -118,15 +124,15 @@ class PlayState extends FlxState
 		switch (_currentLevel)
 		{
 			case 1 :
-				maps = GenerateLevel();
+				maps = GenerateLevel(1);
 				_enemyMaxCount = 10;
 				
 			case 2 :
-				maps = GenerateLevel();
+				maps = GenerateLevel(2);
 				_enemyMaxCount = 100;
 				
 			case 3 :
-				maps = GenerateLevel();
+				maps = GenerateLevel(3);
 				_enemyMaxCount = 150;
 				
 		}		
@@ -140,7 +146,7 @@ class PlayState extends FlxState
 	
 		_player = new Player(0, 0, playerLife,playerMoney,_currentLevel);
 		
-		//_player = new Player(0,0,playerLife,playerMoney,_currentLevel);
+	
 		add(_player);
 		add(maps);
 
@@ -177,17 +183,17 @@ class PlayState extends FlxState
 		
 		
 		//TEST UI //FONCTIONNEL A REFORMATER
-		info = new FlxText(180,32,0);
+		info = new FlxText(250,32,0);
 		//info.scrollFactor.set(0, 0); 
 		info.borderColor = 0xff000000;
 		info.borderStyle = SHADOW;
-		info.text = "Money :" + _player._money;
+		info.text = "Money : " + _player._money;
 		
-		lifeInfo = new FlxText(180,48,0);
+		lifeInfo = new FlxText(250,48,0);
 		//info.scrollFactor.set(0, 0); 
 		lifeInfo.borderColor = 0xff000000;
 		lifeInfo.borderStyle = SHADOW;
-		lifeInfo.text = "Life :" + _player._life;
+		lifeInfo.text = "Life : " + _player._life;
 		
 		add(info);
 		add(lifeInfo);
@@ -202,7 +208,7 @@ class PlayState extends FlxState
 		super.create();
 	
 	//A DECOMMENTER POUR LE RENDU
-		//_gameMusic.play();
+		_gameMusic.play();
 		
 	}
 	
@@ -220,10 +226,10 @@ class PlayState extends FlxState
 		}
 		
 		//VA BOUGER POUR LE RENDU
-		if (FlxG.keys.anyJustPressed([FlxKey.ENTER]))
-		{
-			_spawnTimer.start(2,goSpawn,5);
-		}
+		//if (FlxG.keys.anyJustPressed([FlxKey.ENTER]))
+		//{
+			//_spawnTimer.start(2,goSpawn,5);
+		//}
 		
 		
 		//COLLISION SECTION
@@ -266,14 +272,14 @@ class PlayState extends FlxState
 			playerUpdateUI(Element.earth);
 		}
 		
-		if (FlxG.keys.anyPressed([FlxKey.SHIFT]))
-		{
-			if (FlxG.keys.anyJustPressed([FlxKey.M]))
-			{
-				_player.addMoney(20);
-			}
-		}
-		
+		//if (FlxG.keys.anyPressed([FlxKey.SHIFT]))
+		//{
+			//if (FlxG.keys.anyJustPressed([FlxKey.M]))
+			//{
+				//_player.addMoney(20);
+			//}
+		//}
+		//
 		if (FlxG.keys.anyJustPressed([FlxKey.R]))
 		{
 			FlxG.switchState(new PlayState (1,Tweaking.playerMoney,Tweaking.playerLife));
@@ -289,7 +295,7 @@ class PlayState extends FlxState
 			//trace("Tile index : " + tile );
 			//trace("Tile info : " + maps.getTileByIndex(tile));
 			
-			if(maps.getTileByIndex(tile) == 0 || maps.getTileByIndex(tile) == 4)
+			if(maps.getTileByIndex(tile) == 0 || maps.getTileByIndex(tile) == 4 || maps.getTileByIndex(tile) == 5)
 			{
 				trace("YOU CAN'T BUILD HERE");
 			}
@@ -298,8 +304,12 @@ class PlayState extends FlxState
 				if (_player._money - _player._currentCost >= 0)
 				{
 					var midPoint = maps.getTileCoordsByIndex(tile, false);
-					_player.spendMoney(_player._currentCost);
-					towerSpawner(midPoint);
+					
+					if (towerSpawner(midPoint))
+					{
+						_player.spendMoney(_player._currentCost);
+					}
+					
 				}
 				else
 				{
@@ -333,8 +343,9 @@ class PlayState extends FlxState
 	{
 		//TIMER
 		_spawnTimer = new FlxTimer();
-		
-		_spawnTimer.start(7, onWaveSpawn, 2);		
+		//var floatEn:Int = _enemyMaxCount % 5;
+		trace(_enemyMaxCount / 5);
+		_spawnTimer.start(7, onWaveSpawn, Std.int(_enemyMaxCount / 5));		
 	}
 	
 	public function onWaveSpawn(Timer:FlxTimer):Void
@@ -370,7 +381,7 @@ class PlayState extends FlxState
 	{
 		//trace("ON A HIT : " + obj2._id);
 		
-		if (t.canAttack() && obj2.alive)
+		if (t.canAttack(obj2) && obj2.alive)
 				{
 					//CHECK RESISTANCE
 					if (obj2.checkResistance(t._elementType))
@@ -435,8 +446,9 @@ class PlayState extends FlxState
 	
 	
 	
-	public function towerSpawner(midPoint:FlxPoint)
+	public function towerSpawner(midPoint:FlxPoint):Bool
 	{
+		//var canPutHere:Bool = false;
 		var currentElement:Element = _player._equipedTowerType;
 		if (_towers.length > 0)
 		{
@@ -444,6 +456,14 @@ class PlayState extends FlxState
 			{
 				//trace("TOWER : " + t.x + "," + t.y);
 				//trace("Distance : " + (t.y - (midPoint.y - 16)));
+				if (t.x == midPoint.x-16 && t.y == midPoint.y-16)
+				{
+					trace("IL Y A DEJA UNE TOUR ICI");
+					_alreadyATowerHere.play(false,0);
+					return false;
+				}
+				
+				
 				if ( (t.y - (midPoint.y - 16) == -16  && t.x == (midPoint.x - 16)) ||
 				(t.x - (midPoint.x - 16) == -16  && t.y == (midPoint.y - 16)) )
 				{
@@ -487,16 +507,17 @@ class PlayState extends FlxState
 		var spawn = new Tower(midPoint.x-16, midPoint.y-16,_player._equipedTowerType);
 		_towers.add(spawn);
 		//add(_towers);
-				
 		
+		add(spawn._hitSprite);
+		add(spawn._radiusGUI);
 		add(_towers);
 		
 		_player._equipedTowerType = currentElement;
-		
+		return true;
 	}
 	//ALGO GENERATION MAP
 	
-	public function GenerateLevel():FlxTilemap
+	public function GenerateLevel(level:Int):FlxTilemap
 	{
 	//	var mapTable = [FlxColor.WHITE, FlxColor.BLACK, FlxColor.BLUE, FlxColor.RED, FlxColor.GREEN];
 		var mapTable = [FlxColor.WHITE, FlxColor.BLACK];
@@ -509,7 +530,9 @@ class PlayState extends FlxState
 		var mapTilePath:String = "assets/data/tileASE.png";
 		//mps.loadMapFromCSV(mapCSV, mapTilePath, 16, 16);
 		//mps.loadMapFromGraphic("assets/data/level.png", false, 1, [FlxColor.WHITE, FlxColor.BLACK,FlxColor.BLUE, FlxColor.RED,FlxColor.GREEN], mapTilePath, 16, 16, OFF, 0, 1, 1);
-		mps.loadMapFromGraphic("assets/data/level4.png", false, 1, [FlxColor.WHITE, FlxColor.BLACK,FlxColor.RED,FlxColor.GREEN,FlxColor.PINK], mapTilePath, 16, 16, OFF, 0, 1, 1);
+		//mps.loadMapFromGraphic("assets/data/level4.png", false, 1, [FlxColor.WHITE, FlxColor.BLACK,FlxColor.RED,FlxColor.GREEN,FlxColor.PINK], mapTilePath, 16, 16, OFF, 0, 1, 1);
+		var filename:String = "assets/data/level" + level + ".png";
+		mps.loadMapFromGraphic(filename, false, 1, [FlxColor.WHITE, FlxColor.BLACK,FlxColor.RED,FlxColor.GREEN,FlxColor.PINK,FlxColor.MAGENTA], mapTilePath, 16, 16, OFF, 0, 1, 1);
 		trace("LVL WIDTH : " + mps.widthInTiles);
 		trace("LVL HEIGHT : " + mps.heightInTiles);
 		mps.setTileProperties(0, FlxObject.NONE);
@@ -517,7 +540,7 @@ class PlayState extends FlxState
 		mps.setTileProperties(2, FlxObject.NONE);
 		mps.setTileProperties(3, FlxObject.NONE);
 		mps.setTileProperties(4, FlxObject.ANY);
-	
+		mps.setTileProperties(5, FlxObject.NONE);
 		
 		enemySpawn = mps.getTileCoords(2, false);
 		trace("NOMBRE DE SPAWN : " + enemySpawn.length); 

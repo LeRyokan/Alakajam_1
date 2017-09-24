@@ -19,24 +19,26 @@ class MenuState extends FlxState
 	override public function create():Void
 	{
 		
-		bgColor = 0x00000000;
+		bgColor = 0xFF45283c;
 		
 		super.create();
 		
 		_alphaModifier = 0;
 		
-		//_titleImage = new FlxSprite(0, 0);
-		//_titleImage.loadGraphic(AssetPaths.Flixoul__png, false, 64,64);
-		//_titleImage.screenCenter();
-		//add(_titleImage);
+		_titleImage = new FlxSprite(0, 0);
+		_titleImage.loadGraphic("assets/images/TitleScreen.png", false, 112,112);
+		_titleImage.screenCenter();
+		add(_titleImage);
 		
-		_startDisplay = new FlxText(0, 0, 0, "Click to start", 18, true);
+		_startDisplay = new FlxText(0, 0, 0, "Click to start", 10, true);
+
 		_startDisplay.screenCenter();
+		_startDisplay.y += 30;
 		add(_startDisplay);
 		
-		_credit = new FlxText(0, 0, 0, "A 72h game by Lucas Tixier", 8, true);
+		_credit = new FlxText(0, 0, 0, "A 48h game by Lucas Tixier", 8, true);
 		_credit.screenCenter();
-		_credit.y += 100;
+		_credit.y += 50;
 		add(_credit);
 		
 		_moreCredit = new FlxText(0, 0, 0, "Twitter : @LucasTixier", 8, true);
@@ -44,6 +46,7 @@ class MenuState extends FlxState
 		_moreCredit.y = _credit.y + 100;
 		add(_moreCredit);
 		
+		camera.setScale(2, 2);
 	}
 
 	override public function update(elapsed:Float):Void
