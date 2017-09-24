@@ -7,7 +7,8 @@ class Tweaking
 	// public static inline var varName 								: varType = varValue;
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////// Player
-	public static inline var playerLife							:Int = 5;
+	public static inline var playerLife							:Int = 6;
+	public static inline var playerMoney						:Int = 100;
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////// Enemy
 	public static inline var life_lvl1							: Int = 10;

@@ -19,6 +19,19 @@ class WinState extends FlxState
 	
 	public var _winSound :FlxSound;
 	
+	public var _nextLvlToLoad:Int;
+	public var _money:Int;
+	public var _life:Int;
+	
+	
+	public function new(level:Int, money:Int, life:Int)
+	{
+		super();
+		_nextLvlToLoad = level + 1;
+		_money = money;
+		_life = life;
+	}
+	
 	override public function create():Void
 	{
 		_winSound = FlxG.sound.load("assets/music/win.wav");
@@ -59,7 +72,7 @@ class WinState extends FlxState
         // The left mouse button has just been pressed
 		
 			//Lance le niveau suivant;
-			FlxG.switchState(new MenuState());	
+			FlxG.switchState(new PlayState(_nextLvlToLoad,_money,_life));	
 		}
 		
 		

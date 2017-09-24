@@ -5,6 +5,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.addons.util.FlxFSM;
+import flixel.effects.FlxFlicker;
 import flixel.math.FlxPoint;
 import flixel.math.FlxVelocity;
 import flixel.system.FlxSound;
@@ -17,7 +18,11 @@ class Enemy extends FlxSprite
 	public var _life:Int = 20;
     public var speed:Float = 20;
     public var etype(default, null):Int;
+	
+	//MULTIPLE ELEMENT
 	public var _element:Element;
+	public var _elements:Array<Element>;
+	
 	private var _brain:FSM;
 	
 	
@@ -39,13 +44,13 @@ class Enemy extends FlxSprite
 	
 	public var deadCount :Int = 0;
 
-     public function new(X:Float = 0, Y:Float = 0, EType:Int, ID:Int, Path:Array<FlxPoint> )
+     public function new(X:Float = 0, Y:Float = 0, EType:Int, EType2:Int=0, ID:Int, Path:Array<FlxPoint>)
      {
          super(X, Y);
          etype = EType;
 		 _loot = etype * 10;
          _id = ID;
-		 
+		 _elements = new Array<Element>();
 		 	
 		//SOUND SETUP
 		_hitSound = FlxG.sound.load("assets/sounds/Hit_Hurt.wav", 1, false);
@@ -54,37 +59,52 @@ class Enemy extends FlxSprite
 		 switch (EType) 
 		 {
 			 case 1:
-				_element = Element.fire;
+				//_element = Element.fire;
+				_elements.push(Element.fire);
 			 case 2:
-				_element = Element.water;
+				//_element = Element.water;
+				_elements.push(Element.water);
 			 case 3:
-				_element = Element.earth;
+				//_element = Element.earth;
+				_elements.push(Element.earth);
+			 default:
+				
+		 }
+		 
+		  switch (EType2) 
+		 {
+			 case 1:
+				_elements.push(Element.wind);
+			 case 2:
+				_elements.push(Element.frost);
+			 case 3:
+				_elements.push(Element.electricity);
 			 default:
 				
 		 }
 		 
 		 loadGraphic("assets/images/enemy-" + etype + ".png", true, 16, 16);
-         //setFacingFlip(FlxObject.LEFT, false, false);
-         //setFacingFlip(FlxObject.RIGHT, true, false);
-		 animation.add("hit", [8, 0], 30, false, false, false );
+        
+		 animation.add("hit", [8,0], 30, false, false, false );
 		 animation.add("die", [0,2], 30, false, false, false );
          animation.add("idlemove", [0, 1, 2, 3 ,4 ,5 ,6 ,7], 6,true);
-         //animation.add("lr", [3, 4, 3, 5], 6, false);
-         //animation.add("u", [6, 7, 6, 8], 6, false);
+        
          drag.x = drag.y = 10;
+		 
+		 /*A REVOIR VU QU'ON A CHANGER LES SPRITES*/
          width = 8;
          height = 14;
          offset.x = 4;
          offset.y = 2;
 		 
 		 
-		_brain = new FSM(chase);
-		_idleTmr = 0;
-		playerPos = new FlxPoint(60, 250);
+		//_brain = new FSM(chase);
+		//_idleTmr = 0;
+		//playerPos = new FlxPoint(60, 250);
 		
 		this.path = new FlxPath();
 		_path = Path;
-		this.path.start(_path);
+		this.path.start(_path,33);
 		
 		
 		animation.play("idlemove", false, false, 0);
@@ -99,7 +119,7 @@ class Enemy extends FlxSprite
 		//}
 		
 		
-		_brain.update();
+		//_brain.update();
 		super.update(elapsed);
 	}
 
@@ -119,12 +139,11 @@ class Enemy extends FlxSprite
 		var getKill = false;
 		if (_life - value > 0)
 		{
+			animation.play("hit", false, false, 0);
+			_hitSound.play(false,0);
 			_life -= value;
+			FlxFlicker.flicker(this, 1, 0.04, true, true);
 			
-			_brain.activeState = getHitt;
-			//var options:TweenOptions = { type: FlxTween.PINGPONG, ease: FlxEase.smoothStepIn };
-			//FlxTween.color(this, 0.2, FlxColor.RED, FlxColor.TRANSPARENT);
-			//DECLENCHE UNE ANIMATION DE DEGAT
 		}
 		else
 		{
@@ -133,8 +152,6 @@ class Enemy extends FlxSprite
 			this.alive = false;
 			this.exists = false;
 			getKill = true;
-			_brain.activeState = dead;
-			//this.kill();
 		}
 		
 		return getKill;
@@ -143,27 +160,46 @@ class Enemy extends FlxSprite
 	public function checkResistance(elementHit:Element):Bool
 	{
 		var canHit:Bool = false;
-		switch (_element) 
+		for (element in _elements)
 		{
+			switch (element) 
+			{
 			case fire:
-				if (elementHit == Element.water)
+				if (elementHit == Element.water || elementHit == Element.electricity)
 				{
 					canHit = true;
 				}
 			case water:
-				if (elementHit == Element.earth)
+				if (elementHit == Element.earth || elementHit == Element.wind )
 				{
 					canHit = true;
 				}
 			case earth:
-				if (elementHit == Element.fire)
+				if (elementHit == Element.fire || elementHit == Element.frost)
 				{
 					canHit = true;
 				}
-				
+			case wind:
+				if (elementHit == Element.electricity)
+				{
+					canHit = true;
+				}
+			case electricity:
+				if (elementHit == Element.frost)
+					{
+						canHit = true;
+					}
+			case frost:
+				if (elementHit == Element.wind)
+					{
+						canHit = true;
+					}
 			default:
 				
+			}
 		}
+		
+		
 		
 		return canHit;
 	}
@@ -204,8 +240,8 @@ class Enemy extends FlxSprite
 	
 	public function getHitt():Void
 	{
-		animation.play("hit", false, false, 0);
-		_hitSound.play(false,0);
+		//animation.stop();
+		
 		_brain.activeState = chase;
 		
 		

@@ -15,37 +15,33 @@ import utils.Tweaking;
  */
 class Player extends FlxSprite 
 {
-
+	//public static var instance(default, null): Player;
+	
 	public var _life :Int;
-	public var _money :Int = 50;
+	public var _money :Int;
 	public var _equipedTowerType:Element;
 	public var _costMap: Map<Element,Int>;
 	public var _currentCost : Int;
+	public var _level :Int;
 	
-	public function new(?X:Float=0, ?Y:Float=0) 
+	public override function new(X:Float, Y:Float,life:Int,money:Int,level:Int) 
 	{
-		super(X, Y);
-		
-		_life = Tweaking.playerLife;
-		//_equipedTowerType = "fire";
-		//_towerPossibilities = new Array<Tower>();
-		//_towerPossibilities = new FlxTypedGroup<Tower>();
-		//_towerPossibilities.add(new Tower(0, 0, Element.fire));
-		//_towerPossibilities.add(new Tower(0, 0, Element.water));
-		//_towerPossibilities.add(new Tower(0, 0, Element.earth));
-		//_currentTowerEquiped = new Tower(0, 0, Element.fire);
-		//
-		
-		//_currentTowerEquiped = _towerPossibilities.members[0];
-		//trace(_currentTowerEquiped._elementType);
-		
+		super(X,Y);
+		//instance = this;
+		_life = life;
+		//_life = Tweaking.playerLife;
+		_money = money;
+		//_money = Tweaking.playerMoney;
+		_level = level;
+		//_level = 1;
 		
 		_costMap = new Map<Element,Int>();
-		_costMap.set(Element.fire, 10);
+		_costMap.set(Element.fire, 15);
 		_costMap.set(Element.earth, 20);
-		_costMap.set(Element.water, 15);
+		_costMap.set(Element.water, 10);
 		
-		_equipedTowerType = Element.fire;
+		//Changer
+		_equipedTowerType = Element.water;
 		_currentCost = _costMap.get(_equipedTowerType);
 		
 	}
@@ -60,6 +56,12 @@ class Player extends FlxSprite
 	{
 		_life -= 1;
 	}
+	
+	public function getMoney():Int
+	{
+		return _money;
+	}
+	
 	
 	public function spendMoney(value:Int)
 	{

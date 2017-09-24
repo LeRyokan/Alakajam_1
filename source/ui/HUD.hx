@@ -24,28 +24,28 @@ class HUD extends FlxUIState
 		return null;
 	}	
 	
-	public override function getEvent(name:String, target:Dynamic, data:Dynamic, ?params:Array<Dynamic>):Void
-	{
-		if (params != null)
-		{
-			switch (name)
-			{
-				case "click_button":
-					switch (Std.string(params[0]))
-					{
-						case "back": FlxG.switchState(new PlayState());
-					}
-			}
-		}
-	}
-	
-	public override function update(elapsed:Float):Void
-	{
-		super.update(elapsed);
-		
-			if (FlxG.keys.anyJustPressed([FlxKey.I]))
-		{
-			FlxG.switchState(new PlayState());
-		}
-	}
+	//public override function getEvent(name:String, target:Dynamic, data:Dynamic, ?params:Array<Dynamic>):Void
+	//{
+		//if (params != null)
+		//{
+			//switch (name)
+			//{
+				//case "click_button":
+					//switch (Std.string(params[0]))
+					//{
+						//case "back": FlxG.switchState(new PlayState());
+					//}
+			//}
+		//}
+	//}
+	//
+	//public override function update(elapsed:Float):Void
+	//{
+		//super.update(elapsed);
+		//
+			//if (FlxG.keys.anyJustPressed([FlxKey.I]))
+		//{
+			//FlxG.switchState(new PlayState());
+		//}
+	//}
 }

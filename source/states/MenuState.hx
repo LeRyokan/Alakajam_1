@@ -6,6 +6,7 @@ import flixel.FlxState;
 import flixel.text.FlxText;
 import states.PlayState;
 import ui.HUD;
+import utils.Tweaking;
 
 
 class MenuState extends FlxState
@@ -55,7 +56,7 @@ class MenuState extends FlxState
         // The left mouse button has just been pressed
 		
 			//Lance le jeu
-			FlxG.switchState(new PlayState());	
+			FlxG.switchState(new PlayState(1,Tweaking.playerMoney,Tweaking.playerLife));	
 		}
 		
 		

@@ -5,7 +5,12 @@ package enums;
  */
 enum Element 
 {
+	water;
 	fire;
 	earth;
-	water;
+	wind;
+	frost;
+	electricity;
+	
+	
 }

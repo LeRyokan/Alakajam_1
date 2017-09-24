@@ -12,6 +12,7 @@ import flixel.system.FlxSound;
 import flixel.tile.FlxBaseTilemap.FlxTilemapAutoTiling;
 import flixel.util.FlxArrayUtil;
 import flixel.util.FlxTimer;
+import utils.Tweaking;
 
 //import enums.ItemType;
 import flixel.FlxG;
@@ -47,9 +48,12 @@ class PlayState extends FlxState
 	public var floor:FlxObject;
 	
 	
+	public var _currentLevel:Int;
+	
 	//TIMER ET SPAWNER ET ENEMY
 	public var _spawnTimer:FlxTimer;
 	public var _enemyCount:Int = 0;
+	public var _enemyMaxCount:Int ;
 	public var _enemies:FlxTypedGroup<Enemy>;
 	public var enemySpawn:Array<FlxPoint>;
 	public var pathPoints:Array<FlxPoint>;
@@ -58,12 +62,18 @@ class PlayState extends FlxState
 	public var _exits 	: FlxSprite;
 	public var _towers 	: FlxTypedGroup<Tower>;
 	
-	public var grip :FlxSprite;
 	
+	//SETUP PLAYER A L'ARRACHE
+	public var playerMoney :Int;
+	public var playerLife  :Int;
 	
 	//UI
 	public var info:FlxText;
 	public var lifeInfo:FlxText;
+	
+	public var waterUI :FlxSprite;
+	public var fireUI :FlxSprite;
+	public var earthUI :FlxSprite;
 	
 	//HUD
 	//DOIT PEUT ETRE DISPARAITRE (ON A DEJA LES INFOS DANS LE PLAYER)
@@ -79,6 +89,14 @@ class PlayState extends FlxState
 	
 	public var focusAttack:Int;
 	
+	public override function new(level:Int,money:Int,life:Int)
+	{
+		super();
+		_currentLevel = level;
+		playerMoney = money;
+		trace("LIFE : " + life);
+		playerLife = life;
+	}
 	
 	override public function create():Void 
 	{
@@ -95,7 +113,24 @@ class PlayState extends FlxState
 		bgColor = 0xffaaaaaa;
 		
 		//MAP GENERATION
-		maps = GenerateLevel();
+	//	maps = new FlxTilemap();
+		//maps = GenerateLevel();
+		switch (_currentLevel)
+		{
+			case 1 :
+				maps = GenerateLevel();
+				_enemyMaxCount = 10;
+				
+			case 2 :
+				maps = GenerateLevel();
+				_enemyMaxCount = 100;
+				
+			case 3 :
+				maps = GenerateLevel();
+				_enemyMaxCount = 150;
+				
+		}		
+		
 		
 		FlxG.worldBounds.width = TILE_WIDTH * maps.widthInTiles;
 		FlxG.worldBounds.height = TILE_HEIGHT * maps.heightInTiles;
@@ -103,7 +138,9 @@ class PlayState extends FlxState
 		
 
 	
-		_player = new Player(0, 0);
+		_player = new Player(0, 0, playerLife,playerMoney,_currentLevel);
+		
+		//_player = new Player(0,0,playerLife,playerMoney,_currentLevel);
 		add(_player);
 		add(maps);
 
@@ -114,10 +151,29 @@ class PlayState extends FlxState
 	
 		
 		//HUD
-		//_playerHud = new PlayerHud(player);
-		//add(player.playerHud);
+		//WATER SELECTIONNER PAR DEFAUT
+		
+		waterUI = new FlxSprite(324, 32);
+		waterUI.loadGraphic("assets/images/water_ui.png", true, 24, 24, false);
+		waterUI.animation.add("notselected",[0],30,true,false,false);
+		waterUI.animation.add("selected", [1], 30, true, false, false);
+		waterUI.animation.play("selected");
+		add(waterUI);
 		
 		
+		fireUI = new FlxSprite(324, 56);
+		fireUI.loadGraphic("assets/images/fire_ui.png", true, 24, 24, false);
+		fireUI.animation.add("notselected",[0],30,true,false,false);
+		fireUI.animation.add("selected",[1],30,true,false,false);
+		add(fireUI);
+		
+		
+		
+		earthUI = new FlxSprite(324, 80);
+		earthUI.loadGraphic("assets/images/earth_ui.png", true, 24, 24, false);
+		earthUI.animation.add("notselected",[0],30,true,false,false);
+		earthUI.animation.add("selected",[1],30,true,false,false);
+		add(earthUI);
 		
 		
 		//TEST UI //FONCTIONNEL A REFORMATER
@@ -139,10 +195,10 @@ class PlayState extends FlxState
 		//PATHFINDING CREATION
 		pathPoints = maps.findPath(FlxPoint.get(enemySpawn[0].x + 8 , enemySpawn[0].y +8 ),	FlxPoint.get(_exits.x +8 , _exits.y + 8 ));
 		
-		//TIMER
-		_spawnTimer = new FlxTimer();
-		_spawnTimer.start(2,goSpawn,5);	
-		
+		////TIMER
+		//_spawnTimer = new FlxTimer();
+		//_spawnTimer.start(2,goSpawn,5);	
+		WaveSpawn();
 		super.create();
 	
 	//A DECOMMENTER POUR LE RENDU
@@ -150,10 +206,18 @@ class PlayState extends FlxState
 		
 	}
 	
+	
+	
 	override public function update(elapsed:Float):Void 
 	{
-	
-		
+		//CONDITION DE VICTOIRE LA PLUS POURRI DU MONDE
+		if (_enemyCount == _enemies.countDead() && _enemyCount == _enemyMaxCount)
+		{
+			//trace("WIN :  " + _enemyCount);
+			var timez = new FlxTimer();
+			timez.start(3, SwitchState, 1);
+			
+		}
 		
 		//VA BOUGER POUR LE RENDU
 		if (FlxG.keys.anyJustPressed([FlxKey.ENTER]))
@@ -164,6 +228,7 @@ class PlayState extends FlxState
 		
 		//COLLISION SECTION
 		FlxG.collide(_enemies, maps);
+		
 		
 		for (t in _towers)
 		{
@@ -185,17 +250,20 @@ class PlayState extends FlxState
 				
 		if (FlxG.keys.anyJustPressed([FlxKey.ONE]))
 		{
-			_player.swapTowerEquiped(Element.fire);
+			_player.swapTowerEquiped(Element.water);
+			playerUpdateUI(Element.water);
 		}
 		
 		if (FlxG.keys.anyJustPressed([FlxKey.TWO]))
 		{
-			_player.swapTowerEquiped(Element.water);
+			_player.swapTowerEquiped(Element.fire);
+			playerUpdateUI(Element.fire);
 		}
 		
 		if (FlxG.keys.anyJustPressed([FlxKey.THREE]))
 		{
 			_player.swapTowerEquiped(Element.earth);
+			playerUpdateUI(Element.earth);
 		}
 		
 		if (FlxG.keys.anyPressed([FlxKey.SHIFT]))
@@ -208,18 +276,18 @@ class PlayState extends FlxState
 		
 		if (FlxG.keys.anyJustPressed([FlxKey.R]))
 		{
-			FlxG.resetState();
+			FlxG.switchState(new PlayState (1,Tweaking.playerMoney,Tweaking.playerLife));
 		}
 		
 		//MECHANIQUE PRINCIPALE DU JOUEUR
 		if (FlxG.mouse.justPressed)
 		{
-			trace("CLICK");
+			//trace("CLICK");
 			var mousePos = FlxG.mouse.getWorldPosition(camera);
 			var tile =  maps.getTileIndexByCoords(mousePos);
-			trace("Mouse world pos : " + mousePos);
-			trace("Tile index : " + tile );
-			trace("Tile info : " + maps.getTileByIndex(tile));
+			//trace("Mouse world pos : " + mousePos);
+			//trace("Tile index : " + tile );
+			//trace("Tile info : " + maps.getTileByIndex(tile));
 			
 			if(maps.getTileByIndex(tile) == 0 || maps.getTileByIndex(tile) == 4)
 			{
@@ -240,7 +308,7 @@ class PlayState extends FlxState
 			}	
 		}
 		
-		
+		//if(
 		
 		
 		//UI UPDATE SECTION
@@ -259,9 +327,48 @@ class PlayState extends FlxState
 		
 	}
 	
+	//SPAWNING SECTION
+	
+	public function WaveSpawn()
+	{
+		//TIMER
+		_spawnTimer = new FlxTimer();
+		
+		_spawnTimer.start(7, onWaveSpawn, 2);		
+	}
+	
+	public function onWaveSpawn(Timer:FlxTimer):Void
+	{
+		var _tim = new FlxTimer();
+		_tim.start(2,goSpawn,5);	
+	}
+	
+	private function goSpawn(Timer:FlxTimer):Void
+	{
+		//ajouter de la vie en fonction du temps
+		spawner();
+	}
+	
+	public function spawner()
+	{
+		var enemyType = FlxG.random.int(1, 3);
+		var Enemy = new Enemy(enemySpawn[0].x, enemySpawn[0].y, enemyType,0, _enemyCount,pathPoints);
+		
+		
+		_enemies.add(Enemy);
+		add(_enemies);
+		_enemyCount++;
+	}
+	
+	private function SwitchState(Timer:FlxTimer):Void
+	{
+		//ajouter de la vie en fonction du temps
+		FlxG.switchState(new WinState(_currentLevel,_player._money,_player._life));
+	}
+	
 	public function onEnemyOverlapTower(t:Tower, obj2:Enemy)
 	{
-		trace("ON A HIT : " + obj2._id);
+		//trace("ON A HIT : " + obj2._id);
 		
 		if (t.canAttack() && obj2.alive)
 				{
@@ -277,11 +384,38 @@ class PlayState extends FlxState
 							killed = false;
 						
 						}
-				}
+					}
 				}
 		
 	
 	}
+	
+	public function onTowerOverlapTower(t:Tower, t:Tower)
+	{
+		trace("ON A UN POTE");
+	}
+	
+	public function playerUpdateUI(elem:Element)
+	{
+		switch (elem) 
+		{
+			case Element.water:
+				waterUI.animation.play("selected");
+				fireUI.animation.play("notselected");
+				earthUI.animation.play("notselected");
+			case Element.fire:
+				fireUI.animation.play("selected");
+				waterUI.animation.play("notselected");
+				earthUI.animation.play("notselected");
+			case Element.earth:
+				earthUI.animation.play("selected");
+				fireUI.animation.play("notselected");
+				waterUI.animation.play("notselected");
+			default:
+				
+		}
+	}
+	
 	
 	//GERE LA SORTIE DES MONSTRE DE L'ECRAN ET LA FIN DE JEU
 	public function onExit(obj1:FlxObject, obj2:FlxObject)
@@ -298,41 +432,67 @@ class PlayState extends FlxState
 	}
 	
 	
-	private function goSpawn(Timer:FlxTimer):Void
-	{
-		spawner();
-	}
 	
-	//public function getItem(item:Item, player:Hero):Void
-	//{	
-		//info.text = "RAMASSER";
-		//info.setPosition(item.x, item.y);
-		//info.visible = true;
-		//
-		//if (FlxG.keys.anyJustPressed([FlxKey.G]))
-		//{
-			//item.kill();
-			//player.inventory.addItemToInventory(item);
-		//}
-	//}
-	
-	public function spawner()
-	{
-		var enemyType = FlxG.random.int(1, 3);
-		var Enemy = new Enemy(enemySpawn[0].x, enemySpawn[0].y, enemyType, _enemyCount,pathPoints);
-		
-		
-		_enemies.add(Enemy);
-		add(_enemies);
-		_enemyCount++;
-	}
 	
 	
 	public function towerSpawner(midPoint:FlxPoint)
 	{
+		var currentElement:Element = _player._equipedTowerType;
+		if (_towers.length > 0)
+		{
+			for (t in _towers)
+			{
+				//trace("TOWER : " + t.x + "," + t.y);
+				//trace("Distance : " + (t.y - (midPoint.y - 16)));
+				if ( (t.y - (midPoint.y - 16) == -16  && t.x == (midPoint.x - 16)) ||
+				(t.x - (midPoint.x - 16) == -16  && t.y == (midPoint.y - 16)) )
+				{
+					//t.color = FlxColor.RED; 
+					//trace("TOUR COTE A COTE");
+					////CALCUL DU RESULTAT DU MATCH ET TRANSFORMATION
+					//trace(t._elementType.getIndex() + _player._equipedTowerType.getIndex());
+					
+					//A L'ARRACHE
+					var t1 = _player._equipedTowerType.getIndex();
+					var t2 = t._elementType.getIndex();
+					//trace("VALUE : " + v);
+					//if(v == 0 2 6)
+					if (t1 == 0 && t2 == 1 ||t2 == 0 && t1 == 1)
+					{
+						
+						//var spawn = new Tower(midPoint.x-16, midPoint.y-16,_player._equipedTowerType);
+						//var spawn = new Tower(midPoint.x-16, midPoint.y-16,Element.electricity);
+						//_towers.add(spawn);
+						_player._equipedTowerType = Element.wind;
+						
+					}
+					else if (t1 == 1 && t2 == 2 ||t2 == 1 && t1 == 2)
+					{
+						_player._equipedTowerType = Element.electricity;
+					}
+					else if (t1 == 2 && t2 == 0 ||t2 == 0 && t1 == 2)
+					{
+						_player._equipedTowerType = Element.frost;
+					}
+					
+					
+					
+				}
+				
+			
+			}
+		}
+		
+		
 		var spawn = new Tower(midPoint.x-16, midPoint.y-16,_player._equipedTowerType);
 		_towers.add(spawn);
+		//add(_towers);
+				
+		
 		add(_towers);
+		
+		_player._equipedTowerType = currentElement;
+		
 	}
 	//ALGO GENERATION MAP
 	
@@ -361,7 +521,7 @@ class PlayState extends FlxState
 		
 		enemySpawn = mps.getTileCoords(2, false);
 		trace("NOMBRE DE SPAWN : " + enemySpawn.length); 
-		spawner();
+		//spawner();
 		
 		var exit = mps.getTileCoords(3, false);
 		_exits = new FlxSprite(exit[0].x, exit[0].y);

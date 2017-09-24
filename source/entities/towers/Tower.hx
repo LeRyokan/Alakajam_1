@@ -4,6 +4,7 @@ import entities.enemies.Enemy;
 import entities.enemies.Enemy;
 import enums.Element;
 import flixel.FlxG;
+import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.addons.util.FlxFSM;
 import flixel.addons.util.FlxFSM.FlxFSMState;
@@ -69,6 +70,18 @@ class Tower extends FlxSprite
 				_skinName = "water";
 				_cost = 15;
 				_damage = 15;
+			case Element.wind:
+				_skinName = "wind";
+				_cost = 10;
+				_damage = 10;
+			case Element.frost:
+				_skinName = "frost";
+				_cost = 10;
+				_damage = 10;
+			case Element.electricity:
+				_skinName = "electricity";
+				_cost = 10;
+				_damage = 10;
 			default:
 				
 		}
@@ -88,6 +101,7 @@ class Tower extends FlxSprite
 	
 	 override public function update(elapsed:Float):Void
 	{
+		towerFusion();
 		_flxBrain.update(elapsed);
 		_brain.update();
 		super.update(elapsed);
@@ -109,18 +123,14 @@ class Tower extends FlxSprite
 	  super.draw();
 	}
 	
-	//public function brainChange(state:String)
-	//{
-		//if (state == "attack")
-		//{
-			//_brain.activeState = attack;
-		//}
-		//else
-		//{
-			//_brain.activeState = idle;
-		//}
-		//
-	//}
+	public function towerFusion()
+	{
+		//trace(this.touching);
+		if (this.justTouched(FlxObject.UP))
+		{
+			trace("Je suis adjacent a un truc");
+		}
+	}
 	
 	public function idle():Void
 	{

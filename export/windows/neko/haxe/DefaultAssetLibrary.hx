@@ -65,10 +65,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		Font.registerFont (__ASSET__assets_fonts_alagard_ttf);
+		Font.registerFont (__ASSET__assets_fonts_chrici___ttf);
+		Font.registerFont (__ASSET__assets_fonts_enchanted_land_otf);
+		Font.registerFont (__ASSET__assets_fonts_frogotype_ttf);
+		Font.registerFont (__ASSET__assets_fonts_gothicpixels_ttf);
+		Font.registerFont (__ASSET__assets_fonts_pixelig_cursief_ttf);
 		Font.registerFont (__ASSET__assets_fonts_vera_ttf);
 		Font.registerFont (__ASSET__assets_fonts_verab_ttf);
 		Font.registerFont (__ASSET__assets_fonts_verai_ttf);
 		Font.registerFont (__ASSET__assets_fonts_veraz_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -236,6 +256,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -927,6 +967,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+@:keep class __ASSET__assets_fonts_alagard_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/alagard.ttf"; fontName = "Alagard"; }}
+@:keep class __ASSET__assets_fonts_chrici___ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/CHRICI__.TTF"; fontName = "Christmas Card  II"; }}
+@:keep class __ASSET__assets_fonts_enchanted_land_otf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/Enchanted Land.otf"; fontName = "Enchanted Land"; }}
+@:keep class __ASSET__assets_fonts_frogotype_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/Frogotype.ttf"; fontName = "Frogotype Regular"; }}
+@:keep class __ASSET__assets_fonts_gothicpixels_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/GothicPixels.ttf"; fontName = "GothicPixels"; }}
+@:keep class __ASSET__assets_fonts_pixelig_cursief_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/Pixelig Cursief.ttf"; fontName = "Pixelig Cursief Regular"; }}
 @:keep class __ASSET__assets_fonts_vera_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/vera.ttf"; fontName = "Bitstream Vera Sans"; }}
 @:keep class __ASSET__assets_fonts_verab_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/verab.ttf"; fontName = "Bitstream Vera Sans Bold"; }}
 @:keep class __ASSET__assets_fonts_verai_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/verai.ttf"; fontName = "Bitstream Vera Sans Oblique"; }}
@@ -936,6 +982,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 #else
 
 
+class __ASSET__assets_fonts_alagard_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/alagard.ttf"; fontName = "Alagard";  }}
+class __ASSET__assets_fonts_chrici___ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/CHRICI__.TTF"; fontName = "Christmas Card  II";  }}
+class __ASSET__assets_fonts_enchanted_land_otf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/Enchanted Land.otf"; fontName = "Enchanted Land";  }}
+class __ASSET__assets_fonts_frogotype_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/Frogotype.ttf"; fontName = "Frogotype Regular";  }}
+class __ASSET__assets_fonts_gothicpixels_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/GothicPixels.ttf"; fontName = "GothicPixels";  }}
+class __ASSET__assets_fonts_pixelig_cursief_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/Pixelig Cursief.ttf"; fontName = "Pixelig Cursief Regular";  }}
 class __ASSET__assets_fonts_vera_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/vera.ttf"; fontName = "Bitstream Vera Sans";  }}
 class __ASSET__assets_fonts_verab_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/verab.ttf"; fontName = "Bitstream Vera Sans Bold";  }}
 class __ASSET__assets_fonts_verai_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/fonts/verai.ttf"; fontName = "Bitstream Vera Sans Oblique";  }}
@@ -1013,10 +1065,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_alagard_ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_chrici___ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_enchanted_land_otf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_frogotype_ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_gothicpixels_ttf);
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_pixelig_cursief_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_vera_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_verab_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_verai_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_veraz_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -1202,6 +1274,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/tileASE.png", AssetType.IMAGE);
 		path.set ("assets/data/tileset.png", "assets/data/tileset.png");
 		type.set ("assets/data/tileset.png", AssetType.IMAGE);
+		path.set ("assets/fonts/alagard.ttf", "assets/fonts/alagard.ttf");
+		type.set ("assets/fonts/alagard.ttf", AssetType.FONT);
+		path.set ("assets/fonts/CHRICI__.TTF", "assets/fonts/CHRICI__.TTF");
+		type.set ("assets/fonts/CHRICI__.TTF", AssetType.FONT);
+		path.set ("assets/fonts/Enchanted Land.otf", "assets/fonts/Enchanted Land.otf");
+		type.set ("assets/fonts/Enchanted Land.otf", AssetType.FONT);
+		path.set ("assets/fonts/Frogotype.ttf", "assets/fonts/Frogotype.ttf");
+		type.set ("assets/fonts/Frogotype.ttf", AssetType.FONT);
+		path.set ("assets/fonts/GothicPixels.ttf", "assets/fonts/GothicPixels.ttf");
+		type.set ("assets/fonts/GothicPixels.ttf", AssetType.FONT);
+		path.set ("assets/fonts/Pixelig Cursief.ttf", "assets/fonts/Pixelig Cursief.ttf");
+		type.set ("assets/fonts/Pixelig Cursief.ttf", AssetType.FONT);
 		path.set ("assets/fonts/vera.ttf", "assets/fonts/vera.ttf");
 		type.set ("assets/fonts/vera.ttf", AssetType.FONT);
 		path.set ("assets/fonts/verab.ttf", "assets/fonts/verab.ttf");
@@ -1322,24 +1406,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/ASE/enemy-Sheet.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/enemy.ase", "assets/images/ASE/enemy.ase");
 		type.set ("assets/images/ASE/enemy.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/HIT.ase", "assets/images/ASE/HIT.ase");
+		type.set ("assets/images/ASE/HIT.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/SIXNITY.ase", "assets/images/ASE/SIXNITY.ase");
+		type.set ("assets/images/ASE/SIXNITY.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/TitleScreen.ase", "assets/images/ASE/TitleScreen.ase");
+		type.set ("assets/images/ASE/TitleScreen.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/Tower.ase", "assets/images/ASE/Tower.ase");
 		type.set ("assets/images/ASE/Tower.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/tower_earth.ase", "assets/images/ASE/tower_earth.ase");
 		type.set ("assets/images/ASE/tower_earth.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/tower_earth.png", "assets/images/ASE/tower_earth.png");
 		type.set ("assets/images/ASE/tower_earth.png", AssetType.IMAGE);
+		path.set ("assets/images/ASE/tower_electricity.ase", "assets/images/ASE/tower_electricity.ase");
+		type.set ("assets/images/ASE/tower_electricity.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/tower_frost.ase", "assets/images/ASE/tower_frost.ase");
+		type.set ("assets/images/ASE/tower_frost.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/tower_water.ase", "assets/images/ASE/tower_water.ase");
 		type.set ("assets/images/ASE/tower_water.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/tower_water.png", "assets/images/ASE/tower_water.png");
 		type.set ("assets/images/ASE/tower_water.png", AssetType.IMAGE);
+		path.set ("assets/images/ASE/tower_wind.ase", "assets/images/ASE/tower_wind.ase");
+		type.set ("assets/images/ASE/tower_wind.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/Trinity.ase", "assets/images/ASE/Trinity.ase");
 		type.set ("assets/images/ASE/Trinity.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/TrinityElements.ase", "assets/images/ASE/TrinityElements.ase");
+		type.set ("assets/images/ASE/TrinityElements.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/UI.ase", "assets/images/ASE/UI.ase");
+		type.set ("assets/images/ASE/UI.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/water_enemy.ase", "assets/images/ASE/water_enemy.ase");
 		type.set ("assets/images/ASE/water_enemy.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/Zombie.ase", "assets/images/ASE/Zombie.ase");
 		type.set ("assets/images/ASE/Zombie.ase", AssetType.BINARY);
 		path.set ("assets/images/coin.png", "assets/images/coin.png");
 		type.set ("assets/images/coin.png", AssetType.IMAGE);
+		path.set ("assets/images/earth_ui.png", "assets/images/earth_ui.png");
+		type.set ("assets/images/earth_ui.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-1.png", "assets/images/enemy-1.png");
 		type.set ("assets/images/enemy-1.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-2.png", "assets/images/enemy-2.png");
@@ -1352,6 +1454,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/enemy-8.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-9.png", "assets/images/enemy-9.png");
 		type.set ("assets/images/enemy-9.png", AssetType.IMAGE);
+		path.set ("assets/images/fire_ui.png", "assets/images/fire_ui.png");
+		type.set ("assets/images/fire_ui.png", AssetType.IMAGE);
 		path.set ("assets/images/Flixoul.png", "assets/images/Flixoul.png");
 		type.set ("assets/images/Flixoul.png", AssetType.IMAGE);
 		path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
@@ -1366,12 +1470,20 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/tower.png", AssetType.IMAGE);
 		path.set ("assets/images/tower_earth.png", "assets/images/tower_earth.png");
 		type.set ("assets/images/tower_earth.png", AssetType.IMAGE);
+		path.set ("assets/images/tower_electricity.png", "assets/images/tower_electricity.png");
+		type.set ("assets/images/tower_electricity.png", AssetType.IMAGE);
 		path.set ("assets/images/tower_fire.png", "assets/images/tower_fire.png");
 		type.set ("assets/images/tower_fire.png", AssetType.IMAGE);
+		path.set ("assets/images/tower_frost.png", "assets/images/tower_frost.png");
+		type.set ("assets/images/tower_frost.png", AssetType.IMAGE);
 		path.set ("assets/images/tower_water.png", "assets/images/tower_water.png");
 		type.set ("assets/images/tower_water.png", AssetType.IMAGE);
+		path.set ("assets/images/tower_wind.png", "assets/images/tower_wind.png");
+		type.set ("assets/images/tower_wind.png", AssetType.IMAGE);
 		path.set ("assets/images/Trinity.png", "assets/images/Trinity.png");
 		type.set ("assets/images/Trinity.png", AssetType.IMAGE);
+		path.set ("assets/images/water_ui.png", "assets/images/water_ui.png");
+		type.set ("assets/images/water_ui.png", AssetType.IMAGE);
 		path.set ("assets/levels.png", "assets/levels.png");
 		type.set ("assets/levels.png", AssetType.IMAGE);
 		path.set ("assets/locales/en-US/fontss.xml", "assets/locales/en-US/fontss.xml");
@@ -1566,6 +1678,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/data/tileset.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/fonts/alagard.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/fonts/CHRICI__.TTF";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/fonts/Enchanted Land.otf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/fonts/Frogotype.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/fonts/GothicPixels.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/fonts/Pixelig Cursief.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
 		id = "assets/fonts/vera.ttf";
 		path.set (id, id);
 		type.set (id, AssetType.FONT);
@@ -1746,6 +1876,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/ASE/enemy.ase";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/HIT.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/SIXNITY.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/TitleScreen.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/ASE/Tower.ase";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
@@ -1755,13 +1894,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/ASE/tower_earth.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/ASE/tower_electricity.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/tower_frost.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/ASE/tower_water.ase";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
 		id = "assets/images/ASE/tower_water.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/ASE/tower_wind.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/ASE/Trinity.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/TrinityElements.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/UI.ase";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
 		id = "assets/images/ASE/water_enemy.ase";
@@ -1771,6 +1925,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
 		id = "assets/images/coin.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/earth_ui.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/enemy-1.png";
@@ -1789,6 +1946,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/enemy-9.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/fire_ui.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Flixoul.png";
@@ -1812,13 +1972,25 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/tower_earth.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tower_electricity.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tower_fire.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tower_frost.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tower_water.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tower_wind.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Trinity.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/water_ui.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/levels.png";
@@ -2127,6 +2299,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		useManifest = true;
 		useManifest = true;
 		
+		className.set ("assets/fonts/alagard.ttf", __ASSET__assets_fonts_alagard_ttf);
+		type.set ("assets/fonts/alagard.ttf", AssetType.FONT);
+		
+		className.set ("assets/fonts/CHRICI__.TTF", __ASSET__assets_fonts_chrici___ttf);
+		type.set ("assets/fonts/CHRICI__.TTF", AssetType.FONT);
+		
+		className.set ("assets/fonts/Enchanted Land.otf", __ASSET__assets_fonts_enchanted_land_otf);
+		type.set ("assets/fonts/Enchanted Land.otf", AssetType.FONT);
+		
+		className.set ("assets/fonts/Frogotype.ttf", __ASSET__assets_fonts_frogotype_ttf);
+		type.set ("assets/fonts/Frogotype.ttf", AssetType.FONT);
+		
+		className.set ("assets/fonts/GothicPixels.ttf", __ASSET__assets_fonts_gothicpixels_ttf);
+		type.set ("assets/fonts/GothicPixels.ttf", AssetType.FONT);
+		
+		className.set ("assets/fonts/Pixelig Cursief.ttf", __ASSET__assets_fonts_pixelig_cursief_ttf);
+		type.set ("assets/fonts/Pixelig Cursief.ttf", AssetType.FONT);
+		
 		className.set ("assets/fonts/vera.ttf", __ASSET__assets_fonts_vera_ttf);
 		type.set ("assets/fonts/vera.ttf", AssetType.FONT);
 		
@@ -2138,6 +2328,20 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/fonts/veraz.ttf", __ASSET__assets_fonts_veraz_ttf);
 		type.set ("assets/fonts/veraz.ttf", AssetType.FONT);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -3229,6 +3433,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -3278,10 +3502,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+@:keep #if display private #end class __ASSET__assets_fonts_alagard_ttf extends lime.text.Font { public function new () { super (); name = "Alagard"; } } 
+@:keep #if display private #end class __ASSET__assets_fonts_chrici___ttf extends lime.text.Font { public function new () { super (); name = "Christmas Card  II"; } } 
+@:keep #if display private #end class __ASSET__assets_fonts_enchanted_land_otf extends lime.text.Font { public function new () { super (); name = "Enchanted Land"; } } 
+@:keep #if display private #end class __ASSET__assets_fonts_frogotype_ttf extends lime.text.Font { public function new () { super (); name = "Frogotype Regular"; } } 
+@:keep #if display private #end class __ASSET__assets_fonts_gothicpixels_ttf extends lime.text.Font { public function new () { super (); name = "GothicPixels"; } } 
+@:keep #if display private #end class __ASSET__assets_fonts_pixelig_cursief_ttf extends lime.text.Font { public function new () { super (); name = "Pixelig Cursief Regular"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_vera_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_verab_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Bold"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_verai_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Oblique"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_veraz_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Bold Oblique"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3448,6 +3692,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #else
 
+@:keep #if display private #end class __ASSET__assets_fonts_alagard_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/alagard.ttf"; name = "Alagard"; super (); }}
+@:keep #if display private #end class __ASSET__assets_fonts_chrici___ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/CHRICI__.TTF"; name = "Christmas Card  II"; super (); }}
+@:keep #if display private #end class __ASSET__assets_fonts_enchanted_land_otf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/Enchanted Land.otf"; name = "Enchanted Land"; super (); }}
+@:keep #if display private #end class __ASSET__assets_fonts_frogotype_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/Frogotype.ttf"; name = "Frogotype Regular"; super (); }}
+@:keep #if display private #end class __ASSET__assets_fonts_gothicpixels_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/GothicPixels.ttf"; name = "GothicPixels"; super (); }}
+@:keep #if display private #end class __ASSET__assets_fonts_pixelig_cursief_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/Pixelig Cursief.ttf"; name = "Pixelig Cursief Regular"; super (); }}
 @:keep #if display private #end class __ASSET__assets_fonts_vera_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/vera.ttf"; name = "Bitstream Vera Sans"; super (); }}
 @:keep #if display private #end class __ASSET__assets_fonts_verab_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/verab.ttf"; name = "Bitstream Vera Sans Bold"; super (); }}
 @:keep #if display private #end class __ASSET__assets_fonts_verai_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/verai.ttf"; name = "Bitstream Vera Sans Oblique"; super (); }}
@@ -3500,6 +3750,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 #end
 
 #if (openfl && !flash)
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_alagard_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/alagard.ttf"; name = "Alagard"; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_chrici___ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/CHRICI__.TTF"; name = "Christmas Card  II"; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_enchanted_land_otf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/Enchanted Land.otf"; name = "Enchanted Land"; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_frogotype_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/Frogotype.ttf"; name = "Frogotype Regular"; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_gothicpixels_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/GothicPixels.ttf"; name = "GothicPixels"; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__assets_fonts_pixelig_cursief_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/Pixelig Cursief.ttf"; name = "Pixelig Cursief Regular"; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__assets_fonts_vera_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/vera.ttf"; name = "Bitstream Vera Sans"; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__assets_fonts_verab_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/verab.ttf"; name = "Bitstream Vera Sans Bold"; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__assets_fonts_verai_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/fonts/verai.ttf"; name = "Bitstream Vera Sans Oblique"; super (); }}
