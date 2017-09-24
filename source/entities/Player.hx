@@ -8,6 +8,7 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.math.FlxPoint;
+import utils.Tweaking;
 /**
  * ...
  * @author ElRyoGrande
@@ -15,17 +16,17 @@ import flixel.math.FlxPoint;
 class Player extends FlxSprite 
 {
 
-	public var _life :Int = 20;
+	public var _life :Int;
 	public var _money :Int = 50;
 	public var _equipedTowerType:Element;
-	//public var _towerPossibilities:FlxTypedGroup<Tower>;
-	//public var _currentTowerEquiped:Tower;
 	public var _costMap: Map<Element,Int>;
 	public var _currentCost : Int;
 	
 	public function new(?X:Float=0, ?Y:Float=0) 
 	{
 		super(X, Y);
+		
+		_life = Tweaking.playerLife;
 		//_equipedTowerType = "fire";
 		//_towerPossibilities = new Array<Tower>();
 		//_towerPossibilities = new FlxTypedGroup<Tower>();
@@ -55,7 +56,7 @@ class Player extends FlxSprite
 		
 	}
 	
-	public function LooseLife()
+	public function looseLife()
 	{
 		_life -= 1;
 	}
@@ -65,7 +66,7 @@ class Player extends FlxSprite
 		_money -= value;
 	}
 	
-	public function getMoney(value:Int)
+	public function addMoney(value:Int)
 	{
 		_money += value;
 	}
@@ -79,6 +80,8 @@ class Player extends FlxSprite
 		
 		
 	}
+	
+	
 	
 	
 	override public function update(elapsed:Float):Void

@@ -1,7 +1,7 @@
 package entities.towers;
 
 import entities.enemies.Enemy;
-import entities.enemies.FireEnemy;
+import entities.enemies.Enemy;
 import enums.Element;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -9,6 +9,8 @@ import flixel.addons.util.FlxFSM;
 import flixel.addons.util.FlxFSM.FlxFSMState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.system.FlxAssets.FlxGraphicAsset;
+import flixel.system.FlxSound;
+import flixel.util.FlxTimer;
 
 /**
  * ...
@@ -19,6 +21,8 @@ class Tower extends FlxSprite
 	
 	public var _elementType : Element;
 	public var _damage		: Int;
+	public var _isAttacking : Bool = false;
+	public var _attackCooldown : Int;
 	public var _brain		: FSM;
 	public var _flxBrain	:FlxFSM<FlxSprite>;
 	
@@ -29,30 +33,42 @@ class Tower extends FlxSprite
 	
 	private var _radius		: Int;
 	public var _isInRange 	:Bool = false;
-	public var _target 		:FireEnemy;
+	public var _target 		:Enemy;
 	
 	
-	public var enemies :FlxTypedGroup<FireEnemy>;
+	
+	
+	public var enemies :FlxTypedGroup<Enemy>;
+	
+	
+	//SOUND
+	public var _putTowerSound:FlxSound;
 	
 	public function new(?X:Float=0, ?Y:Float=0,elementType:Element) 
 	{
 		super(X, Y);
 		
 		//_elementType = ElementType;
-		enemies = new FlxTypedGroup<FireEnemy>();
+		enemies = new FlxTypedGroup<Enemy>();
 		_elementType = elementType;
+		
+		//SOUND SETUP
+		_putTowerSound = FlxG.sound.load("assets/sounds/Powerup.wav", 1, false);
 		
 		switch (elementType) 
 		{
 			case Element.fire:
 				_skinName = "fire";
 				_cost = 10;
+				_damage = 10;
 			case Element.earth:
 				_skinName = "earth";
 				_cost = 20;
+				_damage = 20;
 			case Element.water:
 				_skinName = "water";
 				_cost = 15;
+				_damage = 15;
 			default:
 				
 		}
@@ -66,6 +82,7 @@ class Tower extends FlxSprite
 		
 		_brain = new FSM(idle);
 		_flxBrain = new FlxFSM<FlxSprite>(this);
+		_putTowerSound.play(false, 0);
 		
 	}
 	
@@ -92,30 +109,45 @@ class Tower extends FlxSprite
 	  super.draw();
 	}
 	
-	public function brainChange(state:String)
-	{
-		if (state == "attack")
-		{
-			_brain.activeState = attack;
-		}
-		else
-		{
-			_brain.activeState = idle;
-		}
-		
-	}
+	//public function brainChange(state:String)
+	//{
+		//if (state == "attack")
+		//{
+			//_brain.activeState = attack;
+		//}
+		//else
+		//{
+			//_brain.activeState = idle;
+		//}
+		//
+	//}
 	
 	public function idle():Void
 	{
 		
 	}
 	
-	public function attack():Void
+	public function canAttack():Bool
 	{
-		trace("ATTACK ! ");
+		
+		var canAttack:Bool = false;
+		if (!_isAttacking)
+		{
+			var timer:FlxTimer = new FlxTimer();
+			_isAttacking = true;
+			canAttack = true;
+			timer.start(1, onTimer, 1);
+		}
+		
+		return canAttack;
 		
 		
 	}	
+	
+	private function onTimer(timer:FlxTimer):Void
+	{
+		_isAttacking = false;
+	}
 	
 }
 

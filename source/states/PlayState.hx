@@ -3,14 +3,16 @@ package states;
 import entities.Coin;
 import entities.enemies.Enemy;
 import entities.Player;
-import entities.enemies.FireEnemy;
+import entities.enemies.Enemy;
 import entities.towers.Tower;
 import enums.Element;
 import flixel.addons.editors.tiled.TiledMap;
 import flixel.addons.editors.tiled.TiledTileLayer;
+import flixel.system.FlxSound;
 import flixel.tile.FlxBaseTilemap.FlxTilemapAutoTiling;
 import flixel.util.FlxArrayUtil;
 import flixel.util.FlxTimer;
+
 //import enums.ItemType;
 import flixel.FlxG;
 import flixel.FlxObject;
@@ -47,11 +49,13 @@ class PlayState extends FlxState
 	
 	//TIMER ET SPAWNER ET ENEMY
 	public var _spawnTimer:FlxTimer;
-	public var _enemyCount:Int=0;
-	public var _enemies:FlxTypedGroup<FireEnemy>;
-	public var  enemySpawn:Array<FlxPoint>;
+	public var _enemyCount:Int = 0;
+	public var _enemies:FlxTypedGroup<Enemy>;
+	public var enemySpawn:Array<FlxPoint>;
+	public var pathPoints:Array<FlxPoint>;
 	
-	public var _exits 	: FlxTypedGroup<FlxSprite>;
+	
+	public var _exits 	: FlxSprite;
 	public var _towers 	: FlxTypedGroup<Tower>;
 	
 	public var grip :FlxSprite;
@@ -66,37 +70,37 @@ class PlayState extends FlxState
 	//public var _playerHud:PlayerHud;
 	
 	
-	
+	//SOUND
+	public var _gameMusic:FlxSound;
 	
 	
 	//SYSTEM ATTACK
 	public var attacks:FlxTypedGroup<FlxSprite>;
 	
+	public var focusAttack:Int;
+	
 	
 	override public function create():Void 
 	{
-		//TIMER
-		_spawnTimer = new FlxTimer();
-		_spawnTimer.start(5,goSpawn,10);
-		//_spawnTimer.loops = 10;
 		
+		//SOUND
+		_gameMusic = FlxG.sound.load("assets/music/tracki.wav", 1, true);
 		
-		_exits = new FlxTypedGroup<FlxSprite>();
-		_enemies = new FlxTypedGroup<FireEnemy>();
+		//INSTANCIATION
+		_enemies = new FlxTypedGroup<Enemy>();
 		_towers = new FlxTypedGroup<Tower>();
 		
-		//UTILE POUR LE DEBUG
+		//DONNES AFFICHAGE BASIC
 		FlxG.mouse.visible = true;
 		bgColor = 0xffaaaaaa;
 		
-		//GENERATION
+		//MAP GENERATION
 		maps = GenerateLevel();
 		
 		FlxG.worldBounds.width = TILE_WIDTH * maps.widthInTiles;
 		FlxG.worldBounds.height = TILE_HEIGHT * maps.heightInTiles;
 		
 		
-		trace("LOAD");
 
 	
 		_player = new Player(0, 0);
@@ -117,57 +121,68 @@ class PlayState extends FlxState
 		
 		
 		//TEST UI //FONCTIONNEL A REFORMATER
-		
 		info = new FlxText(180,32,0);
 		//info.scrollFactor.set(0, 0); 
 		info.borderColor = 0xff000000;
 		info.borderStyle = SHADOW;
-		info.text = "Money :" + _player._money;// Std.string(_player._money);
+		info.text = "Money :" + _player._money;
 		
 		lifeInfo = new FlxText(180,48,0);
 		//info.scrollFactor.set(0, 0); 
 		lifeInfo.borderColor = 0xff000000;
 		lifeInfo.borderStyle = SHADOW;
-		lifeInfo.text = "Life :" + _player._life;// Std.string(_player._money);
-		
+		lifeInfo.text = "Life :" + _player._life;
 		
 		add(info);
 		add(lifeInfo);
+		
+		//PATHFINDING CREATION
+		pathPoints = maps.findPath(FlxPoint.get(enemySpawn[0].x + 8 , enemySpawn[0].y +8 ),	FlxPoint.get(_exits.x +8 , _exits.y + 8 ));
+		
+		//TIMER
+		_spawnTimer = new FlxTimer();
+		_spawnTimer.start(2,goSpawn,5);	
+		
 		super.create();
 	
+	//A DECOMMENTER POUR LE RENDU
+		//_gameMusic.play();
+		
 	}
 	
 	override public function update(elapsed:Float):Void 
 	{
-		//SPAWNER CREATION
+	
 		
-		//spawner();
 		
+		//VA BOUGER POUR LE RENDU
+		if (FlxG.keys.anyJustPressed([FlxKey.ENTER]))
+		{
+			_spawnTimer.start(2,goSpawn,5);
+		}
 		
 		
 		//COLLISION SECTION
-		//FlxG.collide(_player, maps);
 		FlxG.collide(_enemies, maps);
 		
 		for (t in _towers)
 		{
-			if(FlxG.overlap(t, _enemies,onOverlaping))
+			if(FlxG.overlap(t, _enemies,onEnemyOverlapTower))
 			{
-				trace(t._elementType + " VOIS !");
-				t.brainChange("attack");
 				t._isInRange = true;
-				t._target = _enemies.getFirstExisting();
-				t._target.getHit(10);
 			}
 			else
 			{
-				t.brainChange("idle");
 				t._isInRange = false;
 			}		
 		}
-		//FlxG.overlap(
 		
+		FlxG.overlap(_enemies, _exits, onExit);
 		
+	
+		
+		//INPUT SECTION
+				
 		if (FlxG.keys.anyJustPressed([FlxKey.ONE]))
 		{
 			_player.swapTowerEquiped(Element.fire);
@@ -187,28 +202,28 @@ class PlayState extends FlxState
 		{
 			if (FlxG.keys.anyJustPressed([FlxKey.M]))
 			{
-				_player.getMoney(20);
+				_player.addMoney(20);
 			}
 		}
 		
+		if (FlxG.keys.anyJustPressed([FlxKey.R]))
+		{
+			FlxG.resetState();
+		}
 		
-		
+		//MECHANIQUE PRINCIPALE DU JOUEUR
 		if (FlxG.mouse.justPressed)
 		{
 			trace("CLICK");
 			var mousePos = FlxG.mouse.getWorldPosition(camera);
-			//var mousePos = FlxG.mouse.getPositionInCameraView(camera);
 			var tile =  maps.getTileIndexByCoords(mousePos);
 			trace("Mouse world pos : " + mousePos);
 			trace("Tile index : " + tile );
 			trace("Tile info : " + maps.getTileByIndex(tile));
 			
-			
-			
-			if(maps.getTileByIndex(tile) == 0)
+			if(maps.getTileByIndex(tile) == 0 || maps.getTileByIndex(tile) == 4)
 			{
 				trace("YOU CAN'T BUILD HERE");
-				
 			}
 			else
 			{
@@ -217,42 +232,71 @@ class PlayState extends FlxState
 					var midPoint = maps.getTileCoordsByIndex(tile, false);
 					_player.spendMoney(_player._currentCost);
 					towerSpawner(midPoint);
-					
-				
-				
 				}
 				else
 				{
 					trace("YOU NEED MONEY");
 				}
-				
-				
-			
-			}
-		
-			
-		}
-		
-		if (FlxG.keys.anyJustPressed([FlxKey.R]))
-		{
-			FlxG.resetState();
+			}	
 		}
 		
 		
+		
+		
+		//UI UPDATE SECTION
 		if (info.text != Std.string(_player._money))
 		{
 			info.text = "Money :" + _player._money;
 		}
 		
+		if (lifeInfo.text != Std.string(_player._life))
+		{
+			lifeInfo.text = "Life :" + _player._life;
+		}
+		
+		
 		super.update(elapsed);
 		
 	}
 	
-	public function onOverlaping(obj1:FlxObject, obj2:FlxObject)
+	public function onEnemyOverlapTower(t:Tower, obj2:Enemy)
 	{
-		trace("ON A HIT : " + obj2.ID );
+		trace("ON A HIT : " + obj2._id);
+		
+		if (t.canAttack() && obj2.alive)
+				{
+					//CHECK RESISTANCE
+					if (obj2.checkResistance(t._elementType))
+					{
+					
+						var killed = obj2.getHit(t._damage);
+						if (killed)
+						{
+							//récupérer le prix sur l'enemy
+							_player.addMoney(obj2._loot);
+							killed = false;
+						
+						}
+				}
+				}
+		
 	
 	}
+	
+	//GERE LA SORTIE DES MONSTRE DE L'ECRAN ET LA FIN DE JEU
+	public function onExit(obj1:FlxObject, obj2:FlxObject)
+	{
+		//Un ennemi atteint la sortie -1 vie
+		obj1.kill();
+		_player.looseLife();
+		
+		if (_player._life <= 0)
+		{
+			FlxG.switchState(new LooseState());
+		}
+	
+	}
+	
 	
 	private function goSpawn(Timer:FlxTimer):Void
 	{
@@ -274,8 +318,11 @@ class PlayState extends FlxState
 	
 	public function spawner()
 	{
-		var fireEnemy = new FireEnemy(enemySpawn[0].x, enemySpawn[0].y, 1, _enemyCount);
-		_enemies.add(fireEnemy);
+		var enemyType = FlxG.random.int(1, 3);
+		var Enemy = new Enemy(enemySpawn[0].x, enemySpawn[0].y, enemyType, _enemyCount,pathPoints);
+		
+		
+		_enemies.add(Enemy);
 		add(_enemies);
 		_enemyCount++;
 	}
@@ -299,20 +346,28 @@ class PlayState extends FlxState
 
 		//var mapCSV = FlxStringUtil.imageToCSV("assets/data/mapo.png",false,1,mapTable);
 		//trace(mps.toString());
-		var mapTilePath:String = "assets/data/tileset.png";
+		var mapTilePath:String = "assets/data/tileASE.png";
 		//mps.loadMapFromCSV(mapCSV, mapTilePath, 16, 16);
 		//mps.loadMapFromGraphic("assets/data/level.png", false, 1, [FlxColor.WHITE, FlxColor.BLACK,FlxColor.BLUE, FlxColor.RED,FlxColor.GREEN], mapTilePath, 16, 16, OFF, 0, 1, 1);
-		mps.loadMapFromGraphic("assets/data/level3.png", false, 1, [FlxColor.WHITE, FlxColor.BLACK,FlxColor.RED,FlxColor.GREEN], mapTilePath, 16, 16, OFF, 0, 1, 1);
+		mps.loadMapFromGraphic("assets/data/level4.png", false, 1, [FlxColor.WHITE, FlxColor.BLACK,FlxColor.RED,FlxColor.GREEN,FlxColor.PINK], mapTilePath, 16, 16, OFF, 0, 1, 1);
 		trace("LVL WIDTH : " + mps.widthInTiles);
 		trace("LVL HEIGHT : " + mps.heightInTiles);
 		mps.setTileProperties(0, FlxObject.NONE);
 		mps.setTileProperties(1, FlxObject.ANY);
-		
+		mps.setTileProperties(2, FlxObject.NONE);
+		mps.setTileProperties(3, FlxObject.NONE);
+		mps.setTileProperties(4, FlxObject.ANY);
+	
 		
 		enemySpawn = mps.getTileCoords(2, false);
 		trace("NOMBRE DE SPAWN : " + enemySpawn.length); 
 		spawner();
 		
+		var exit = mps.getTileCoords(3, false);
+		_exits = new FlxSprite(exit[0].x, exit[0].y);
+		_exits.width = 16;
+		_exits.height = 16;
+		//_exits.allowCollisions = true;
 		//Chargement de la position de départ du joueur
 		//var playerPos:Array<FlxPoint> = mps.getTileCoords(2, false);
 		//_player = new Player(playerPos[0].x, playerPos[0].y);

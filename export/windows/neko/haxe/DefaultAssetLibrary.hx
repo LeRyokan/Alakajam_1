@@ -62,10 +62,41 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
 		Font.registerFont (__ASSET__assets_fonts_vera_ttf);
 		Font.registerFont (__ASSET__assets_fonts_verab_ttf);
 		Font.registerFont (__ASSET__assets_fonts_verai_ttf);
 		Font.registerFont (__ASSET__assets_fonts_veraz_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -205,6 +236,37 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -948,10 +1010,41 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_vera_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_verab_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_verai_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_veraz_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -1101,6 +1194,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/level2.png", AssetType.IMAGE);
 		path.set ("assets/data/level3.png", "assets/data/level3.png");
 		type.set ("assets/data/level3.png", AssetType.IMAGE);
+		path.set ("assets/data/level4.png", "assets/data/level4.png");
+		type.set ("assets/data/level4.png", AssetType.IMAGE);
+		path.set ("assets/data/tileASE.ase", "assets/data/tileASE.ase");
+		type.set ("assets/data/tileASE.ase", AssetType.BINARY);
+		path.set ("assets/data/tileASE.png", "assets/data/tileASE.png");
+		type.set ("assets/data/tileASE.png", AssetType.IMAGE);
 		path.set ("assets/data/tileset.png", "assets/data/tileset.png");
 		type.set ("assets/data/tileset.png", AssetType.IMAGE);
 		path.set ("assets/fonts/vera.ttf", "assets/fonts/vera.ttf");
@@ -1215,6 +1314,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/gfx/ui/title_back2.png", AssetType.IMAGE);
 		path.set ("assets/images/ASE/DeathBall.ase", "assets/images/ASE/DeathBall.ase");
 		type.set ("assets/images/ASE/DeathBall.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/earth_enemy.ase", "assets/images/ASE/earth_enemy.ase");
+		type.set ("assets/images/ASE/earth_enemy.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/Elements.ase", "assets/images/ASE/Elements.ase");
+		type.set ("assets/images/ASE/Elements.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/enemy-Sheet.ase", "assets/images/ASE/enemy-Sheet.ase");
+		type.set ("assets/images/ASE/enemy-Sheet.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/enemy.ase", "assets/images/ASE/enemy.ase");
+		type.set ("assets/images/ASE/enemy.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/Tower.ase", "assets/images/ASE/Tower.ase");
 		type.set ("assets/images/ASE/Tower.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/tower_earth.ase", "assets/images/ASE/tower_earth.ase");
@@ -1225,12 +1332,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/ASE/tower_water.ase", AssetType.BINARY);
 		path.set ("assets/images/ASE/tower_water.png", "assets/images/ASE/tower_water.png");
 		type.set ("assets/images/ASE/tower_water.png", AssetType.IMAGE);
+		path.set ("assets/images/ASE/Trinity.ase", "assets/images/ASE/Trinity.ase");
+		type.set ("assets/images/ASE/Trinity.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/water_enemy.ase", "assets/images/ASE/water_enemy.ase");
+		type.set ("assets/images/ASE/water_enemy.ase", AssetType.BINARY);
+		path.set ("assets/images/ASE/Zombie.ase", "assets/images/ASE/Zombie.ase");
+		type.set ("assets/images/ASE/Zombie.ase", AssetType.BINARY);
 		path.set ("assets/images/coin.png", "assets/images/coin.png");
 		type.set ("assets/images/coin.png", AssetType.IMAGE);
-		path.set ("assets/images/enemy-0.png", "assets/images/enemy-0.png");
-		type.set ("assets/images/enemy-0.png", AssetType.IMAGE);
 		path.set ("assets/images/enemy-1.png", "assets/images/enemy-1.png");
 		type.set ("assets/images/enemy-1.png", AssetType.IMAGE);
+		path.set ("assets/images/enemy-2.png", "assets/images/enemy-2.png");
+		type.set ("assets/images/enemy-2.png", AssetType.IMAGE);
+		path.set ("assets/images/enemy-3.png", "assets/images/enemy-3.png");
+		type.set ("assets/images/enemy-3.png", AssetType.IMAGE);
+		path.set ("assets/images/enemy-7.png", "assets/images/enemy-7.png");
+		type.set ("assets/images/enemy-7.png", AssetType.IMAGE);
+		path.set ("assets/images/enemy-8.png", "assets/images/enemy-8.png");
+		type.set ("assets/images/enemy-8.png", AssetType.IMAGE);
+		path.set ("assets/images/enemy-9.png", "assets/images/enemy-9.png");
+		type.set ("assets/images/enemy-9.png", AssetType.IMAGE);
 		path.set ("assets/images/Flixoul.png", "assets/images/Flixoul.png");
 		type.set ("assets/images/Flixoul.png", AssetType.IMAGE);
 		path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
@@ -1249,8 +1370,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/tower_fire.png", AssetType.IMAGE);
 		path.set ("assets/images/tower_water.png", "assets/images/tower_water.png");
 		type.set ("assets/images/tower_water.png", AssetType.IMAGE);
-		path.set ("assets/images/Zombie.png", "assets/images/Zombie.png");
-		type.set ("assets/images/Zombie.png", AssetType.IMAGE);
+		path.set ("assets/images/Trinity.png", "assets/images/Trinity.png");
+		type.set ("assets/images/Trinity.png", AssetType.IMAGE);
 		path.set ("assets/levels.png", "assets/levels.png");
 		type.set ("assets/levels.png", AssetType.IMAGE);
 		path.set ("assets/locales/en-US/fontss.xml", "assets/locales/en-US/fontss.xml");
@@ -1289,8 +1410,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/locales/_flags/pl-PL.png", AssetType.IMAGE);
 		path.set ("assets/locales/_flags/yo-DA.png", "assets/locales/_flags/yo-DA.png");
 		type.set ("assets/locales/_flags/yo-DA.png", AssetType.IMAGE);
+		path.set ("assets/music/end.ceol", "assets/music/end.ceol");
+		type.set ("assets/music/end.ceol", AssetType.TEXT);
+		path.set ("assets/music/loose.ceol", "assets/music/loose.ceol");
+		type.set ("assets/music/loose.ceol", AssetType.TEXT);
+		path.set ("assets/music/loose3.ceol", "assets/music/loose3.ceol");
+		type.set ("assets/music/loose3.ceol", AssetType.TEXT);
+		path.set ("assets/music/loose3.wav", "assets/music/loose3.wav");
+		type.set ("assets/music/loose3.wav", AssetType.SOUND);
 		path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
+		path.set ("assets/music/track.ceol", "assets/music/track.ceol");
+		type.set ("assets/music/track.ceol", AssetType.TEXT);
+		path.set ("assets/music/tracki.wav", "assets/music/tracki.wav");
+		type.set ("assets/music/tracki.wav", AssetType.SOUND);
+		path.set ("assets/music/win.ceol", "assets/music/win.ceol");
+		type.set ("assets/music/win.ceol", AssetType.TEXT);
+		path.set ("assets/music/win.wav", "assets/music/win.wav");
+		type.set ("assets/music/win.wav", AssetType.SOUND);
+		path.set ("assets/sounds/Disparition.bfxrsound", "assets/sounds/Disparition.bfxrsound");
+		type.set ("assets/sounds/Disparition.bfxrsound", AssetType.TEXT);
+		path.set ("assets/sounds/Disparition.wav", "assets/sounds/Disparition.wav");
+		type.set ("assets/sounds/Disparition.wav", AssetType.SOUND);
+		path.set ("assets/sounds/Hit_Hurt.bfxrsound", "assets/sounds/Hit_Hurt.bfxrsound");
+		type.set ("assets/sounds/Hit_Hurt.bfxrsound", AssetType.TEXT);
+		path.set ("assets/sounds/Hit_Hurt.wav", "assets/sounds/Hit_Hurt.wav");
+		type.set ("assets/sounds/Hit_Hurt.wav", AssetType.SOUND);
+		path.set ("assets/sounds/loose2.ceol", "assets/sounds/loose2.ceol");
+		type.set ("assets/sounds/loose2.ceol", AssetType.TEXT);
+		path.set ("assets/sounds/Powerup.bfxrsound", "assets/sounds/Powerup.bfxrsound");
+		type.set ("assets/sounds/Powerup.bfxrsound", AssetType.TEXT);
+		path.set ("assets/sounds/Powerup.wav", "assets/sounds/Powerup.wav");
+		type.set ("assets/sounds/Powerup.wav", AssetType.SOUND);
+		path.set ("assets/sounds/Put_Tower.bfxrsound", "assets/sounds/Put_Tower.bfxrsound");
+		type.set ("assets/sounds/Put_Tower.bfxrsound", AssetType.TEXT);
+		path.set ("assets/sounds/Put_Tower.wav", "assets/sounds/Put_Tower.wav");
+		type.set ("assets/sounds/Put_Tower.wav", AssetType.SOUND);
 		path.set ("assets/sounds/sounds-go-here.txt", "assets/sounds/sounds-go-here.txt");
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
 		path.set ("assets/tiled/example.tmx", "assets/tiled/example.tmx");
@@ -1397,6 +1552,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/data/level3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/data/level4.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/data/tileASE.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/data/tileASE.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/data/tileset.png";
@@ -1570,6 +1734,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/ASE/DeathBall.ase";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/earth_enemy.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/Elements.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/enemy-Sheet.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/enemy.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/ASE/Tower.ase";
 		path.set (id, id);
 		type.set (id, AssetType.BINARY);
@@ -1585,13 +1761,34 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/ASE/tower_water.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/ASE/Trinity.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/water_enemy.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/ASE/Zombie.ase";
+		path.set (id, id);
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/coin.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/enemy-0.png";
+		id = "assets/images/enemy-1.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/enemy-1.png";
+		id = "assets/images/enemy-2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/enemy-3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/enemy-7.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/enemy-8.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/enemy-9.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Flixoul.png";
@@ -1621,7 +1818,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/tower_water.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/Zombie.png";
+		id = "assets/images/Trinity.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/levels.png";
@@ -1681,9 +1878,60 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/locales/_flags/yo-DA.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/music/end.ceol";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/music/loose.ceol";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/music/loose3.ceol";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/music/loose3.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/music/track.ceol";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/music/tracki.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/music/win.ceol";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/music/win.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Disparition.bfxrsound";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/sounds/Disparition.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Hit_Hurt.bfxrsound";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/sounds/Hit_Hurt.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/loose2.ceol";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/sounds/Powerup.bfxrsound";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/sounds/Powerup.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Put_Tower.bfxrsound";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/sounds/Put_Tower.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/sounds-go-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -1875,6 +2123,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		
 		className.set ("assets/fonts/vera.ttf", __ASSET__assets_fonts_vera_ttf);
 		type.set ("assets/fonts/vera.ttf", AssetType.FONT);
@@ -1887,6 +2138,34 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/fonts/veraz.ttf", __ASSET__assets_fonts_veraz_ttf);
 		type.set ("assets/fonts/veraz.ttf", AssetType.FONT);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -2919,6 +3198,37 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -2965,10 +3275,41 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
 @:keep #if display private #end class __ASSET__assets_fonts_vera_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_verab_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Bold"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_verai_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Oblique"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_veraz_ttf extends lime.text.Font { public function new () { super (); name = "Bitstream Vera Sans Bold Oblique"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
